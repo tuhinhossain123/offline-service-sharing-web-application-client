@@ -10,7 +10,7 @@ const Banner = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="text-center px-2">
+      <div className="px-2">
         <h1 className="text-6xl font-bold font-mono">
           <span className="text-gray-300">
           Travel memories you'll never forget
