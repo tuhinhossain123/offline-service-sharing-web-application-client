@@ -76,10 +76,13 @@ const Navbar = () => {
                   className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <li>
-                    <a>Item 1</a>
+                    <a>My-services</a>
                   </li>
                   <li>
-                    <a>Item 2</a>
+                    <a>Add-services</a>
+                  </li>
+                  <li>
+                    <a>My-schedules</a>
                   </li>
                 </ul>
               </div>
@@ -184,7 +187,7 @@ const Navbar = () => {
             </>
           ) : (
             <Link to="/login">
-              <button className="btn bg-[#02a388] text-white">Login</button>
+              <button className="btn bg-[#02a388] text-white">Sing In</button>
             </Link>
           )}
         </div>
