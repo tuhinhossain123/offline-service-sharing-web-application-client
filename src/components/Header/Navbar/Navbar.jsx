@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { AuthContext } from "../../../pages/Provider/AuthProvider";
+import logo from "../../../assets/logo.jpeg";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -62,18 +63,13 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              
               className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? " "
-                  : ""
+                isPending ? "pending" : isActive ? " " : ""
               }
             >
               <div className="dropdown dropdown-bottom">
                 <label tabIndex={0} className="text-black">
-                Dashboard
+                  Dashboard
                 </label>
                 <ul
                   tabIndex={0}
@@ -91,43 +87,40 @@ const Navbar = () => {
           </li>
         </>
       )}
-   {
-    user ? "" : <>
-    
-    <li>
-    <NavLink
-        to="/register"
-        className={({ isActive, isPending }) =>
-        isPending
-            ? "pending"
-            : isActive
-            ? "text-slate-600 underline font-medium"
-            : ""
-        }
-    >
-        Register
-    </NavLink>
-    </li>
-      <li>
-        <NavLink
-          to="/login"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "text-slate-600 underline font-medium"
-              : ""
-          }
-        >
-          Login
-        </NavLink>
-      </li>
-      
-    
-    
-    
-    </>
-   }
+      {user ? (
+        ""
+      ) : (
+        <>
+          <li>
+            <NavLink
+              to="/register"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-slate-600 underline font-medium"
+                  : ""
+              }
+            >
+              Register
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/login"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-slate-600 underline font-medium"
+                  : ""
+              }
+            >
+              Login
+            </NavLink>
+          </li>
+        </>
+      )}
     </>
   );
   return (
@@ -158,9 +151,10 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <h2 className="text-xl font-serif font-semibold text-orange-500">
-            Social Events
-          </h2>
+          <div className="">
+            <img src={logo} alt="" className="w-14 h-14 rounded-full mx-auto mb-0"/>
+            <h2 className="text-sm font-semibold ml-2 font-mono text-sky-600 text-center">Local Tours & Guide</h2>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
