@@ -3,7 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 
 const FollowUs = () => {
   return (
-    <div className="bg-gray-50 space-y-4 mt-10 pt-10 pb-10">
+    <div className="bg-gray-50 space-y-4 mt-16 pt-10 pb-10">
       <h2 className="text-center text-2xl font-bold">Follow Us</h2>
       <div className="flex justify-center items-center gap-5">
         <FaFacebookSquare className="text-3xl"></FaFacebookSquare>

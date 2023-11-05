@@ -2,7 +2,7 @@ import review from "../../assets/review.jpg";
 const Review = () => {
   return (
     <div className="mt-10">
-      <h1 className="text-center text-3xl font-semibold text-orange-500 mb-4">
+      <h1 className="text-center text-3xl font-semibold text-orange-500 mb-4 px-1">
         CUSTOMER TESTIMONIALS
       </h1>
       <hr className="w-[200px] border-2 border-black mx-auto mb-6" />
