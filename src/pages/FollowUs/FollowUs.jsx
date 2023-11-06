@@ -18,7 +18,7 @@ const FollowUs = () => {
           placeholder="Enter your email"
           className="bg-gray-300 text-white px-2 py-3 w-1/2 rounded-l-lg pl-4"
         />
-        <button className="btn p-5 rounded-none rounded-r-lg bg-red-500 text-white">Subscribe</button>
+        <button className="p-3 font-bold rounded-none rounded-r-lg bg-[#02a388] text-white">Subscribe</button>
         
       </div>
     </div>

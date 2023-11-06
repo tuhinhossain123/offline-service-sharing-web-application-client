@@ -45,7 +45,7 @@ const Login = () => {
       });
   };
   return (
-    <div className="w-full md:w-[35%] mx-auto">
+    <div className="w-full md:w-[35%] mx-auto ">
       <div className="hero-content flex-col">
         <div className="">
           <h1 className="text-2xl font-bold">Please Login</h1>
@@ -85,7 +85,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-3">
-                <button className="btn bg-secondary text-white">Login</button>
+                <button className="p-3 font-bold rounded text-xl bg-[#02a388] text-white">Login</button>
                 <ToastContainer />
               </div>
               <div className="mt-4">

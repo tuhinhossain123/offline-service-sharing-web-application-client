@@ -32,22 +32,6 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to={`/details/${id}`}
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "text-slate-600 underline font-medium"
-              : ""
-          }
-        >
-          Details
-        </NavLink>
-      </li>
-      {user && (
-        <>
-          <li>
             <NavLink
               to="/services"
               className={({ isActive, isPending }) =>
@@ -59,6 +43,22 @@ const Navbar = () => {
               }
             >
               Services
+            </NavLink>
+          </li>
+      {user && (
+        <>
+          <li>
+            <NavLink
+              to="/manageService"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-slate-600 underline font-medium"
+                  : ""
+              }
+            >
+              Manage Service
             </NavLink>
           </li>
           <li>
@@ -127,8 +127,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="px-10">
-      <div className="navbar bg-base-100">
+    <div className="px-10 bg-teal-50">
+      <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -179,7 +179,7 @@ const Navbar = () => {
                 </div>
                 <button
                   onClick={handleLogOut}
-                  className="btn bg-[#02a388] text-white"
+                  className="p-3 font-bold rounded  bg-[#02a388] text-white"
                 >
                   Sing Out
                 </button>
@@ -187,7 +187,7 @@ const Navbar = () => {
             </>
           ) : (
             <Link to="/login">
-              <button className="btn bg-[#02a388] text-white">Sing In</button>
+              <button className="p-3 font-bold rounded  bg-[#02a388] text-white">Sing In</button>
             </Link>
           )}
         </div>

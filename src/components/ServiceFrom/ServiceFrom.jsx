@@ -2,13 +2,13 @@ const ServiceFrom = ({ handleSubmit }) => {
   return (
     <div className="px-10 mt-5 mb-16">
       <h2 className="text-3xl font-semibold text-center mb-3">Add Service</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="w-full md:w-[60%] mx-auto">
         <div className="md:flex justify-center gap-10 mb-2">
-          <div className="form-control md:w-1/4">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text ">Your Name:</span>
             </label>
-            <label className="input-group">
+            <label>
               <input
                 type="text"
                 name="name"
@@ -18,11 +18,11 @@ const ServiceFrom = ({ handleSubmit }) => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/4">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text ">Email:</span>
             </label>
-            <label className="input-group">
+            <label  >
               <input
                 type="email"
                 name="email"
@@ -34,11 +34,11 @@ const ServiceFrom = ({ handleSubmit }) => {
           </div>
         </div>
         <div className="md:flex justify-center gap-10 mb-2">
-          <div className="form-control md:w-1/4">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text ">Picture URL:</span>
             </label>
-            <label className="input-group">
+            <label  >
               <input
                 type="text"
                 name="url"
@@ -47,11 +47,11 @@ const ServiceFrom = ({ handleSubmit }) => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/4">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text ">Service Name:</span>
             </label>
-            <label className="input-group">
+            <label  >
               <input
                 type="text"
                 name="serviceName"
@@ -61,12 +61,12 @@ const ServiceFrom = ({ handleSubmit }) => {
             </label>
           </div>
         </div>
-        <div className="md:flex justify-center gap-10 mb-2">
-          <div className="form-control md:w-1/4">
+        <div className="md:flex justify-center w-full gap-10 mb-2">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text ">Price:</span>
             </label>
-            <label className="input-group">
+            <label  >
               <input
                 type="text"
                 name="price"
@@ -75,11 +75,11 @@ const ServiceFrom = ({ handleSubmit }) => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/4">
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text ">Service Area:</span>
             </label>
-            <label className="input-group">
+            <label  >
               <input
                 type="text"
                 name="serviceArea"
@@ -89,7 +89,7 @@ const ServiceFrom = ({ handleSubmit }) => {
             </label>
           </div>
         </div>
-        <div className="form-control mx-auto text-center mb-2 w-2/4">
+        <div className="form-control mx-auto text-center mb-2 ">
           <label className="label">
             <span className="label-text ">Description:</span>
           </label>
@@ -102,7 +102,7 @@ const ServiceFrom = ({ handleSubmit }) => {
           ></textarea>
         </div>
         <div className="flex justify-center">
-          <button className="btn bg-gray-200 mt-3 w-3/6 ">add</button>
+          <button className="btn btn-block bg-gray-200 mt-3 ">add</button>
         </div>
       </form>
     </div>
