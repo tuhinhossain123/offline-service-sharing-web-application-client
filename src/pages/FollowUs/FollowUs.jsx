@@ -1,23 +1,25 @@
-import { FaFacebookSquare } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+
 
 const FollowUs = () => {
   return (
-    <div className="bg-gray-50 space-y-4 mt-16 pt-10 pb-10">
-      <h2 className="text-center text-2xl font-bold">Follow Us</h2>
-      <div className="flex justify-center items-center gap-5">
-        <FaFacebookSquare className="text-3xl"></FaFacebookSquare>
-        <FcGoogle className="text-3xl"></FcGoogle>
-      </div>
-      <h2 className="text-center text-3xl font-bold pt-4 text-orange-500">HOW CAN WE HELP?</h2>
-      <p className="text-center font-semibold pt-2 px-4">
-        Would you like to find a tour or get in touch with a guide? Start with
-        our Find a Tour. <br /> If you need help from the ToursByLocals Support
-        Team, you can contact us anytime.
+    <div className="bg-base-100 mt-16 w-3/4 mx-auto py-16 rounded px-3">
+      <h1 className="text-center text-4xl font-bold">
+        Sign up for our newsletter
+      </h1>
+      <p className="text-center text-lg pt-5">
+        Stay up to date with the roadmap progress, announcements and exclusive <br />
+        discounts feel free to sign up with your email.
       </p>
-      <div className="flex justify-center items-center gap-6">
-        <button className="btn btn-secondary text-white">FIND A TOUR</button>
-        <button className="btn btn-secondary text-white">CONTACT US</button>
+      <div className="flex justify-center items-center pt-10  mx-auto">
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Enter your email"
+          className="bg-gray-300 text-white px-2 py-3 w-1/2 rounded-l-lg pl-4"
+        />
+        <button className="btn p-5 rounded-none rounded-r-lg bg-red-500 text-white">Subscribe</button>
+        
       </div>
     </div>
   );

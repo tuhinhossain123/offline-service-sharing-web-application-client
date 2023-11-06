@@ -23,7 +23,7 @@ const Banner = () => {
             connection to the locale.
           </p>
         <div className="flex justify-center">
-        <button className="text-center btn btn-secondary">Book Now..</button>
+        <button className="text-center btn bg-red-600 border-none text-white">Book Now..</button>
         </div>
       </div>
     </div>
