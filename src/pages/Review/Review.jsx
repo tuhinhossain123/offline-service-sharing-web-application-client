@@ -1,12 +1,12 @@
 import review from "../../assets/review.jpg";
 const Review = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 px-10">
       <h1 className="text-center text-3xl font-semibold text-orange-500 mb-4 px-1">
         CUSTOMER TESTIMONIALS
       </h1>
       <hr className="w-[200px] border-2 border-black mx-auto mb-6" />
-      <div className="md:flex justify-center items-center gap-5">
+      <div className="md:flex justify-center items-center space-y-2 gap-5">
         <div className="w-f">
           <img
             src={review}
