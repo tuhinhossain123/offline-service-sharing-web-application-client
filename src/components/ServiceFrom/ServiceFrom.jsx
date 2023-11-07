@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
 
-import { useContext } from 'react';
-import { AuthContext } from '../../pages/Provider/AuthProvider';
+import { useContext } from "react";
+import { AuthContext } from "../../pages/Provider/AuthProvider";
 const ServiceFrom = ({ handleSubmit }) => {
-
-  const {user}=useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   return (
     <div className="px-10 mt-5 mb-1">
       <h2 className="text-3xl font-semibold text-center mb-3">Add Service</h2>
@@ -29,7 +28,7 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label className="label">
               <span className="label-text ">Email:</span>
             </label>
-            <label  >
+            <label>
               <input
                 type="email"
                 name="email"
@@ -46,7 +45,7 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label className="label">
               <span className="label-text ">Picture URL:</span>
             </label>
-            <label  >
+            <label>
               <input
                 type="text"
                 name="url"
@@ -60,7 +59,7 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label className="label">
               <span className="label-text ">Service Name:</span>
             </label>
-            <label  >
+            <label>
               <input
                 type="text"
                 name="serviceName"
@@ -75,7 +74,7 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label className="label">
               <span className="label-text ">Price:</span>
             </label>
-            <label  >
+            <label>
               <input
                 type="text"
                 name="price"
@@ -88,7 +87,7 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label className="label">
               <span className="label-text ">Service Area:</span>
             </label>
-            <label  >
+            <label>
               <input
                 type="text"
                 name="serviceArea"

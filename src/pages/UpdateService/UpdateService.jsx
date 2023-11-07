@@ -5,9 +5,6 @@ import { useLoaderData } from "react-router-dom";
 
 const UpdateService = () => {
     const data = useLoaderData();
-    console.log(data)
-    // dynamic vabe data load korte hbe
-    // default value add korte hbe
 
     const handleUpdate =(e)=>{
         e.preventDefault();

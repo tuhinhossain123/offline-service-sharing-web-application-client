@@ -1,7 +1,42 @@
+import axios from "axios";
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Details = () => {
   const details = useLoaderData();
+  const {user}=useContext(AuthContext)
+
+  const submitFrom = (e) => {
+    e.preventDefault();
+    const from = e.target;
+    const serviceName = from.serviceName.value;
+    const url = from.url.value;
+    const providerEmail = from.providerEmail.value;
+    const userEmail = from.userEmail.value;
+    const date = from.date.value;
+    const instruction = from.instruction.value;
+    const price = from.price.value;
+
+    const userInfo = {
+        serviceName,
+        url,
+        providerEmail,
+        userEmail,
+        date,
+        instruction,
+        price,
+      };
+      console.log(userInfo);
+    };
+
+    axios.post('http://localhost:5000/booking')
+    .then(data =>{
+        console.log(data.data)
+    })
+    .catch(error =>{
+        console.log(error)
+    })
 
   return (
     <div className="flex items-start justify-between gap-5 w-[60%] mx-auto my-16">
@@ -56,7 +91,6 @@ const Details = () => {
           </div>
           <div>
             {/* modal start here */}
-            {/* Open the modal using document.getElementById('ID').showModal() method */}
             <button
               className="bg-[#02a388] btn-block py-2 px-3 text-white rounded my-2 font-bold"
               onClick={() => document.getElementById("my_modal_5").showModal()}
@@ -69,7 +103,7 @@ const Details = () => {
             >
               <div className="modal-box">
                 <div className="">
-                  <form className="w-full ">
+                  <form onSubmit={submitFrom} className="w-full ">
                     <div className="form-control w-full">
                       <label className="label">
                         <span className="label-text ">Service Name:</span>
@@ -80,6 +114,8 @@ const Details = () => {
                           name="serviceName"
                           placeholder="Service Name,"
                           className="input input-bordered w-full"
+                          defaultValue={details.service_name}
+                          readOnly
                         />
                       </label>
                     </div>
@@ -93,6 +129,8 @@ const Details = () => {
                           name="url"
                           placeholder="URL"
                           className="input input-bordered w-full"
+                          defaultValue={details.service_img}
+                          readOnly
                         />
                       </label>
                     </div>
@@ -106,7 +144,6 @@ const Details = () => {
                           name="providerEmail"
                           placeholder="Provider Email"
                           className="input input-bordered w-full"
-                          readOnly
                         />
                       </label>
                     </div>
@@ -117,10 +154,10 @@ const Details = () => {
                       <label>
                         <input
                           type="email"
-                          name="UserEmail"
+                          name="userEmail"
                           placeholder="User Email"
                           className="input input-bordered w-full"
-                          readOnly
+                          defaultValue={user.email}
                         />
                       </label>
                     </div>
@@ -139,7 +176,10 @@ const Details = () => {
                     </div>
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="label-text "> Special instruction:</span>
+                        <span className="label-text ">
+                          {" "}
+                          Special instruction:
+                        </span>
                       </label>
                       <label>
                         <input
@@ -161,10 +201,14 @@ const Details = () => {
                           name="price"
                           placeholder="Price"
                           className="input input-bordered w-full"
+                          defaultValue={details.service_price}
+                          readOnly
                         />
                       </label>
                     </div>
-                  <button className="bg-[#02a388] btn-block py-2 px-3 text-white rounded mt-4">Purchase</button>
+                    <button className="bg-[#02a388] btn-block py-2 px-3 text-white rounded mt-4">
+                      Purchase
+                    </button>
                   </form>
                 </div>
                 <div className="modal-action">
