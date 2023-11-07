@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const Show = ({ show, searchItem, setSearchItem }) => {
   const {
+    _id,
     service_img,
     service_name,
     service_provider_img,
@@ -45,9 +48,9 @@ const Show = ({ show, searchItem, setSearchItem }) => {
               </span>{" "}
               {service_price}
             </p>
-            <button className="py-2 px-3 rounded bg-[#02a388] font-semibold text-white">
+            <Link to={`/details/${_id}`}  className="py-2 px-3 rounded bg-[#02a388] font-semibold text-white">
               View Details
-            </button>
+            </Link>
           </div>
         </div>
       </div>

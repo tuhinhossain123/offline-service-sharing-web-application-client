@@ -9,6 +9,7 @@ import ManageService from "../pages/ManageService/ManageService";
 import UpdateService from "../pages/UpdateService/UpdateService";
 import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
 import AllServices from "../pages/AllServices/AllServices";
+import Details from "../pages/Details/Details";
 
 
 const router = createBrowserRouter([
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
         path: '/allServices',
         element: <AllServices></AllServices>,
         loader: ()=> fetch('http://localhost:5000/services')
+      },
+      {
+        path: '/details/:id',
+        element: <Details></Details>,
+        loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
       }
      
     ]

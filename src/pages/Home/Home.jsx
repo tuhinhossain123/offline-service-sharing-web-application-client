@@ -7,7 +7,6 @@ import Services from "../Services/Services";
 
 const Home = () => {
   const popularService = useLoaderData();
-  console.log(popularService);
 
   return (
     <>

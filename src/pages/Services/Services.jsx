@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const Services = ({ service }) => {
-  const { service_img,service_name,service_provider_img,service_provider_name, 
+  const {_id, service_img,service_name,service_provider_img,service_provider_name, 
     service_price,service_des} = service;
 
   return (
@@ -25,7 +25,7 @@ const Services = ({ service }) => {
           </div>
           <div className="flex items-center justify-between">
             <p className=""> <span className="text-xl text-red-500 font-bold">Price:</span> {service_price}</p>
-            <button className="py-2 px-3 rounded  bg-[#02a388] font-semibold text-white">View Details</button>
+            <Link to={`/details/${_id}`} className="py-2 px-3 rounded  bg-[#02a388] font-semibold text-white">View Details</Link>
           </div>
         </div>
       </div>

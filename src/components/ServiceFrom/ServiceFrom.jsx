@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import { useContext } from 'react';
 import { AuthContext } from '../../pages/Provider/AuthProvider';
@@ -51,6 +52,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                 name="url"
                 placeholder="URL"
                 className="input input-bordered w-full"
+                defaultValue={user.photoURL}
               />
             </label>
           </div>
