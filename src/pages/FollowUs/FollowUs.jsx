@@ -2,7 +2,7 @@
 
 const FollowUs = () => {
   return (
-    <div className="bg-base-100 mt-16 w-3/4 mx-auto py-16 rounded px-3">
+    <div className="bg-base-100 my-16 w-3/4 mx-auto py-16 rounded px-3">
       <h1 className="text-center text-4xl font-bold">
         Sign up for our newsletter
       </h1>

@@ -7,7 +7,7 @@ import img7 from "../../assets/7.png";
 
 const MeetTheTeam = () => {
   return (
-    <div className="px-16 mt-16">
+    <div className="px-16 my-16">
       <h2 className="text-center text-3xl font-bold mb-2 text-orange-500">Meet The Team</h2>
       <p className="text-center text-xl font-medium">
         Connecting travelers with local guides worldwide, since 2015
