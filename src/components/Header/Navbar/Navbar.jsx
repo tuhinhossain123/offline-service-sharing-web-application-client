@@ -49,7 +49,7 @@ const Navbar = () => {
         <>
           <li>
             <NavLink
-              to="/manageService"
+              to="/manageServices"
               className={({ isActive, isPending }) =>
                 isPending
                   ? "pending"
@@ -58,7 +58,7 @@ const Navbar = () => {
                   : ""
               }
             >
-              Manage Service
+              Manage Services
             </NavLink>
           </li>
           <li>
@@ -79,8 +79,19 @@ const Navbar = () => {
                     <a>My-services</a>
                   </li>
                   <li>
-                    <a>Add-services</a>
-                  </li>
+            <NavLink
+              to="/addServices"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-slate-600 underline font-medium"
+                  : ""
+              }
+            >
+              Add Service
+            </NavLink>
+          </li>
                   <li>
                     <a>My-schedules</a>
                   </li>

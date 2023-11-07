@@ -55,6 +55,7 @@ const MeetTheTeam = () => {
             <p className="font-lg font-semibold text-red-600">Tour Connection Specialist</p>
           </div>
         </div>
+       
       </div>
     </div>
   );

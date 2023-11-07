@@ -27,7 +27,7 @@ const AddService = () => {
 
     }
     return (
-        <div>
+        <div className="">
             <ServiceFrom handleSubmit={handleSubmit}></ServiceFrom>
         </div>
     );

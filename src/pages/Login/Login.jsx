@@ -85,7 +85,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-3">
-                <button className="p-3 font-bold rounded text-xl bg-[#02a388] text-white">Login</button>
+                <button className="p-3 font-bold rounded text-lg bg-[#02a388] text-white">Login</button>
                 <ToastContainer />
               </div>
               <div className="mt-4">

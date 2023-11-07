@@ -1,6 +1,11 @@
+
+import { useContext } from 'react';
+import { AuthContext } from '../../pages/Provider/AuthProvider';
 const ServiceFrom = ({ handleSubmit }) => {
+
+  const {user}=useContext(AuthContext)
   return (
-    <div className="px-10 mt-5 mb-16">
+    <div className="px-10 mt-5 mb-1">
       <h2 className="text-3xl font-semibold text-center mb-3">Add Service</h2>
       <form onSubmit={handleSubmit} className="w-full md:w-[60%] mx-auto">
         <div className="md:flex justify-center gap-10 mb-2">
@@ -15,6 +20,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                 placeholder="Your Name"
                 className="input input-bordered w-full"
                 readOnly
+                defaultValue={user.displayName}
               />
             </label>
           </div>
@@ -29,6 +35,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                 placeholder="Your Email"
                 className="input input-bordered w-full"
                 readOnly
+                defaultValue={user.email}
               />
             </label>
           </div>

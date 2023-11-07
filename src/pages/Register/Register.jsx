@@ -112,7 +112,7 @@ const Register = () => {
                 <p className="text-red-500">{error}</p>
               </div>
               <div className="form-control mt-4">
-                <button className="p-3 font-bold rounded text-xl bg-[#02a388] text-white">
+                <button className="p-3 font-bold rounded text-lg bg-[#02a388] text-white">
                   Register
                 </button>
                 <ToastContainer />

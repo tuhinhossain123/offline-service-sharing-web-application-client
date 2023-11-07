@@ -7,6 +7,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import AddService from "../pages/AddService/AddService";
 import ManageService from "../pages/ManageService/ManageService";
 import UpdateService from "../pages/UpdateService/UpdateService";
+import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: ()=> fetch('http://localhost:5000/services')
       },
       {
         path: '/login',
@@ -28,12 +30,12 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path: '/addService',
-        element: <AddService></AddService>
+        path: '/addServices',
+        element: <PrivateRoute><AddService></AddService></PrivateRoute>,
       },
       {
-        path: '/manageService',
-        element: <ManageService></ManageService>,
+        path: '/manageServices',
+        element:<PrivateRoute> <ManageService></ManageService></PrivateRoute>,
         loader: ()=> fetch('http://localhost:5000/services')
       },
       {
