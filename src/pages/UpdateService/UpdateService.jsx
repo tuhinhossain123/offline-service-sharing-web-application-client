@@ -50,7 +50,7 @@ const UpdateService = () => {
                 name="name"
                 placeholder="Your Name"
                 className="input input-bordered w-full"
-                defaultValue={data.service_provider_name}
+                defaultValue={data.displayName}
                 readOnly
               />
             </label>
@@ -78,10 +78,10 @@ const UpdateService = () => {
             <label className="input-group">
               <input
                 type="text"
-                name="url"
+                name="service_img"
                 placeholder="URL"
                 className="input input-bordered w-full"
-                defaultValue={data.service_provider_img}
+                defaultValue={data.service_img}
               />
             </label>
           </div>
@@ -92,7 +92,7 @@ const UpdateService = () => {
             <label className="input-group">
               <input
                 type="text"
-                name="serviceName"
+                name="service_name"
                 placeholder="Service Name,"
                 className="input input-bordered w-full"
                 defaultValue={data.service_name}
@@ -108,7 +108,7 @@ const UpdateService = () => {
             <label className="input-group">
               <input
                 type="text"
-                name="price"
+                name="service_price"
                 placeholder="Price"
                 className="input input-bordered w-full"
                 defaultValue={data.service_price}
@@ -122,7 +122,7 @@ const UpdateService = () => {
             <label className="input-group">
               <input
                 type="text"
-                name="serviceArea"
+                name="service_area"
                 placeholder="Service Area"
                 className="input input-bordered w-full"
                 defaultValue={data.service_area}
@@ -136,7 +136,7 @@ const UpdateService = () => {
           </label>
           <textarea
             className="border p-5"
-            name="description"
+            name="service_des"
             defaultValue={data.service_des}
             id=""
             cols="10"

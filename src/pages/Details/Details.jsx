@@ -5,40 +5,41 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Details = () => {
   const details = useLoaderData();
-  const {user}=useContext(AuthContext)
+  const { user } = useContext(AuthContext);
 
   const submitFrom = (e) => {
     e.preventDefault();
+
     const from = e.target;
     const serviceName = from.serviceName.value;
+    const service_img = details.service_img;
     const url = from.url.value;
-    const providerEmail = from.providerEmail.value;
+    const provider_email = from.providerEmail.value;
     const userEmail = from.userEmail.value;
     const date = from.date.value;
     const instruction = from.instruction.value;
     const price = from.price.value;
 
     const userInfo = {
-        serviceName,
-        url,
-        providerEmail,
-        userEmail,
-        date,
-        instruction,
-        price,
-      };
-      console.log(userInfo);
-
-      axios.post('http://localhost:5000/booking', userInfo)
-      .then(data =>{
-          console.log(data)
-      })
-      .catch(error =>{
-          console.log(error)
-      })
+      serviceName,
+      url,
+      provider_email,
+      userEmail,
+      date,
+      instruction,
+      price,
+      service_img,
     };
 
-   
+    axios
+      .post("http://localhost:5000/booking", userInfo)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="flex items-start justify-between gap-5 w-[60%] mx-auto my-16">
@@ -138,7 +139,7 @@ const Details = () => {
                     </div>
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="label-text ">Provider Email:</span>
+                        <span className="label-text">Provider Email:</span>
                       </label>
                       <label>
                         <input
@@ -147,7 +148,6 @@ const Details = () => {
                           placeholder="Provider Email"
                           className="input input-bordered w-full"
                           defaultValue={details.provider_email}
-                          readOnly
                         />
                       </label>
                     </div>

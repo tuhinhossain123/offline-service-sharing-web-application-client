@@ -2,6 +2,7 @@
 
 import { useContext } from "react";
 import { AuthContext } from "../../pages/Provider/AuthProvider";
+
 const ServiceFrom = ({ handleSubmit }) => {
   const { user } = useContext(AuthContext);
   return (
@@ -19,8 +20,8 @@ const ServiceFrom = ({ handleSubmit }) => {
                 name="name"
                 placeholder="Your Name"
                 className="input input-bordered w-full"
-                readOnly
-                defaultValue={user.displayName}
+                defaultValue={user.displayName
+                }
               />
             </label>
           </div>
@@ -34,7 +35,6 @@ const ServiceFrom = ({ handleSubmit }) => {
                 name="email"
                 placeholder="Your Email"
                 className="input input-bordered w-full"
-                readOnly
                 defaultValue={user.email}
               />
             </label>
@@ -43,16 +43,15 @@ const ServiceFrom = ({ handleSubmit }) => {
         <div className="md:flex justify-center gap-10 mb-2">
           <div className="form-control w-full">
             <label className="label">
-              <span className="label-text ">Picture URL:</span>
+              <span className="label-text ">Service Picture URL:</span>
             </label>
             <label>
               <input
                 type="text"
-                name="service_img"
+                name="provider_img"
                 placeholder="URL"
                 className="input input-bordered w-full"
-                defaultValue={user.photoURL}
-                readOnly
+                
               />
             </label>
           </div>
@@ -97,6 +96,20 @@ const ServiceFrom = ({ handleSubmit }) => {
               />
             </label>
           </div>
+        </div>
+        <div className="form-control w-full">
+          <label className="label">
+            <span className="label-text ">Service Provider Img:</span>
+          </label>
+          <label>
+            <input
+              type="text"
+              name="service_area"
+              placeholder="Service Img"
+              className="input input-bordered w-full"
+              defaultValue={user.photoURL}
+            />
+          </label>
         </div>
         <div className="form-control mx-auto text-center mb-2 ">
           <label className="label">
