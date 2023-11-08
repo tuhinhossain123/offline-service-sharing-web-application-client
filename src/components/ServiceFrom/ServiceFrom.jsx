@@ -48,10 +48,11 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label>
               <input
                 type="text"
-                name="url"
+                name="service_img"
                 placeholder="URL"
                 className="input input-bordered w-full"
                 defaultValue={user.photoURL}
+                readOnly
               />
             </label>
           </div>
@@ -62,7 +63,7 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label>
               <input
                 type="text"
-                name="serviceName"
+                name="service_name"
                 placeholder="Service Name,"
                 className="input input-bordered w-full"
               />
@@ -77,7 +78,7 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label>
               <input
                 type="text"
-                name="price"
+                name="service_price"
                 placeholder="Price"
                 className="input input-bordered w-full"
               />
@@ -90,7 +91,7 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label>
               <input
                 type="text"
-                name="serviceArea"
+                name="service_area"
                 placeholder="Service Area"
                 className="input input-bordered w-full"
               />
@@ -103,7 +104,7 @@ const ServiceFrom = ({ handleSubmit }) => {
           </label>
           <textarea
             className="border p-5"
-            name="description"
+            name="service_des"
             id=""
             cols="10"
             rows="3"

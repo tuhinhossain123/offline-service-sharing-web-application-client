@@ -42,7 +42,7 @@ const Navbar = () => {
                   : ""
               }
             >
-              Services
+             All Services
             </NavLink>
           </li>
       {user && (
@@ -92,9 +92,20 @@ const Navbar = () => {
               Add Service
             </NavLink>
           </li>
-                  <li>
-                    <a>My-schedules</a>
-                  </li>
+          <li>
+            <NavLink
+              to="/mySchedules"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-slate-600 underline font-medium"
+                  : ""
+              }
+            >
+              My Schedules
+            </NavLink>
+          </li>
                 </ul>
               </div>
             </NavLink>

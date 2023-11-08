@@ -6,7 +6,7 @@ const AllServices = () => {
   const showAll = useLoaderData();
   const [searchItem, setSearchItem]=useState("");
 
-  const filterData = showAll?.filter((item)=>item.service_name.toLowerCase().includes(searchItem.toLowerCase()))
+  const filterData = showAll?.filter((item)=>item.service_name?.toLowerCase().includes(searchItem.toLowerCase()))
 
   return (
     <div>

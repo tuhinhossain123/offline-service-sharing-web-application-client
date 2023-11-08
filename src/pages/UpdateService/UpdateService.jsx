@@ -1,35 +1,44 @@
 import axios from "axios";
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
-
-
+import { AuthContext } from "../Provider/AuthProvider";
 
 const UpdateService = () => {
-    const data = useLoaderData();
+  const data = useLoaderData();
+  const { user } = useContext(AuthContext);
 
-    const handleUpdate =(e)=>{
-        e.preventDefault();
-        const form = e.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const url = form.url.value;
-        const serviceName = form.serviceName.value;
-        const price = form.price.value;
-        const serviceArea = form.serviceArea.value;
-        const description = form.description.value;
-        const user = {name, email, url, serviceName, price, serviceArea, description };
-        console.log(user)
+  const handleUpdate = (e) => {
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const service_img = form.service_img.value;
+    const service_name = form.service_name.value;
+    const service_price = form.service_price.value;
+    const service_area = form.service_area.value;
+    const service_des = form.service_des.value;
+    const user = {
+      name,
+      email,
+      service_img,
+      service_name,
+      service_price,
+      service_area,
+      service_des,
+    };
+    console.log(user);
 
-        axios.put('')
-        .then(data =>{
-            console.log(data)
-        })
-        .catch(error =>{
-            console.log(error)
-        })
-    }
-    return (
-        <div>
-          <form onSubmit={handleUpdate} className="md:w-[60%] mx-auto">
+    axios
+      .put("")
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  return (
+    <div>
+      <form onSubmit={handleUpdate} className="md:w-[60%] mx-auto">
         <div className="md:flex justify-center gap-10 mb-2">
           <div className="form-control  w-full">
             <label className="label">
@@ -41,8 +50,7 @@ const UpdateService = () => {
                 name="name"
                 placeholder="Your Name"
                 className="input input-bordered w-full"
-                defaultValue={data.service_provider_name
-                }
+                defaultValue={data.service_provider_name}
                 readOnly
               />
             </label>
@@ -57,7 +65,7 @@ const UpdateService = () => {
                 name="email"
                 placeholder="Your Email"
                 className="input input-bordered w-full"
-                defaultValue={data.email}
+                defaultValue={user.email}
               />
             </label>
           </div>
@@ -73,8 +81,7 @@ const UpdateService = () => {
                 name="url"
                 placeholder="URL"
                 className="input input-bordered w-full"
-                defaultValue={data.service_provider_img
-                  }
+                defaultValue={data.service_provider_img}
               />
             </label>
           </div>
@@ -140,8 +147,8 @@ const UpdateService = () => {
           <button className="btn btn-block bg-gray-200 mt-3">add</button>
         </div>
       </form>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default UpdateService;

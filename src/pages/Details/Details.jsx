@@ -28,15 +28,17 @@ const Details = () => {
         price,
       };
       console.log(userInfo);
+
+      axios.post('http://localhost:5000/booking', userInfo)
+      .then(data =>{
+          console.log(data)
+      })
+      .catch(error =>{
+          console.log(error)
+      })
     };
 
-    axios.post('http://localhost:5000/booking')
-    .then(data =>{
-        console.log(data.data)
-    })
-    .catch(error =>{
-        console.log(error)
-    })
+   
 
   return (
     <div className="flex items-start justify-between gap-5 w-[60%] mx-auto my-16">
@@ -144,6 +146,8 @@ const Details = () => {
                           name="providerEmail"
                           placeholder="Provider Email"
                           className="input input-bordered w-full"
+                          defaultValue={details.provider_email}
+                          readOnly
                         />
                       </label>
                     </div>
