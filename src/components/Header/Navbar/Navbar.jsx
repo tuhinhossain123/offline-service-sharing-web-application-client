@@ -32,19 +32,19 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-            <NavLink
-              to="/allServices"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? "text-slate-600 underline font-medium"
-                  : ""
-              }
-            >
-             All Services
-            </NavLink>
-          </li>
+        <NavLink
+          to="/allServices"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-slate-600 underline font-medium"
+              : ""
+          }
+        >
+          All Services
+        </NavLink>
+      </li>
       {user && (
         <>
           <li>
@@ -79,40 +79,40 @@ const Navbar = () => {
                     <a>My-services</a>
                   </li>
                   <li>
-            <NavLink
-              to="/addServices"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? "text-slate-600 underline font-medium"
-                  : ""
-              }
-            >
-              Add Service
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/mySchedules"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? "text-slate-600 underline font-medium"
-                  : ""
-              }
-            >
-              My Schedules
-            </NavLink>
-          </li>
+                    <NavLink
+                      to="/addServices"
+                      className={({ isActive, isPending }) =>
+                        isPending
+                          ? "pending"
+                          : isActive
+                          ? "text-slate-600 underline font-medium"
+                          : ""
+                      }
+                    >
+                      Add Service
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/mySchedules"
+                      className={({ isActive, isPending }) =>
+                        isPending
+                          ? "pending"
+                          : isActive
+                          ? "text-slate-600 underline font-medium"
+                          : ""
+                      }
+                    >
+                      My Schedules
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             </NavLink>
           </li>
         </>
       )}
-      {user ? (
+      {/* {user ? (
         ""
       ) : (
         <>
@@ -145,7 +145,7 @@ const Navbar = () => {
             </NavLink>
           </li>
         </>
-      )}
+      )} */}
     </>
   );
   return (
@@ -177,8 +177,14 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="">
-            <img src={logo} alt="" className="w-14 h-14 rounded-full mx-auto mb-0"/>
-            <h2 className="text-sm font-semibold ml-2 font-mono text-sky-600 text-center">Local Tours & Guide</h2>
+            <img
+              src={logo}
+              alt=""
+              className="w-14 h-14 rounded-full mx-auto mb-0"
+            />
+            <h2 className="text-sm font-semibold ml-2 font-mono text-sky-600 text-center">
+              Local Tours & Guide
+            </h2>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -203,13 +209,15 @@ const Navbar = () => {
                   onClick={handleLogOut}
                   className="p-3 font-bold rounded  bg-[#02a388] text-white"
                 >
-                  Sing Out
+                  Register
                 </button>
               </div>
             </>
           ) : (
             <Link to="/login">
-              <button className="p-3 font-bold rounded  bg-[#02a388] text-white">Sing In</button>
+              <button className="p-3 font-bold rounded  bg-[#02a388] text-white">
+                Login
+              </button>
             </Link>
           )}
         </div>

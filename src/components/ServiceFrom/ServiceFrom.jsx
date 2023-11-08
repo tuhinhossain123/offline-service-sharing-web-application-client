@@ -12,16 +12,15 @@ const ServiceFrom = ({ handleSubmit }) => {
         <div className="md:flex justify-center gap-10 mb-2">
           <div className="form-control w-full">
             <label className="label">
-              <span className="label-text ">Your Name:</span>
+              <span className="label-text ">Name:</span>
             </label>
             <label>
               <input
                 type="text"
-                name="name"
-                placeholder="Your Name"
+                name="service_provider_name"
+                placeholder="Your name"
                 className="input input-bordered w-full"
-                defaultValue={user.displayName
-                }
+                defaultValue={user.displayName}
               />
             </label>
           </div>
@@ -48,10 +47,9 @@ const ServiceFrom = ({ handleSubmit }) => {
             <label>
               <input
                 type="text"
-                name="provider_img"
+                name="service_img"
                 placeholder="URL"
                 className="input input-bordered w-full"
-                
               />
             </label>
           </div>
@@ -104,7 +102,7 @@ const ServiceFrom = ({ handleSubmit }) => {
           <label>
             <input
               type="text"
-              name="service_area"
+              name="service_provider_img"
               placeholder="Service Img"
               className="input input-bordered w-full"
               defaultValue={user.photoURL}
@@ -124,7 +122,7 @@ const ServiceFrom = ({ handleSubmit }) => {
           ></textarea>
         </div>
         <div className="flex justify-center">
-          <button className="btn btn-block bg-gray-200 mt-3 ">add</button>
+          <button className="btn btn-block bg-gray-200 mt-3 ">Add</button>
         </div>
       </form>
     </div>

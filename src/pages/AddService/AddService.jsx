@@ -6,19 +6,19 @@ const AddService = () => {
     e.preventDefault();
     const form = e.target;
 
-    const name = form.name.value;
+    const service_provider_name = form.service_provider_name.value;
     const provider_email = form.email.value;
     const service_img = form.service_img.value;
-    const provider_img = form.provider_img.value;
+    const service_provider_img = form.service_provider_img.value;
     const service_name = form.service_name.value;
     const service_price = form.service_price.value;
     const service_area = form.service_area.value;
     const service_des = form.service_des.value;
 
     const user = {
-      name,
+      service_provider_name,
       provider_email,
-      provider_img,
+      service_provider_img,
       service_img,
       service_name,
       service_price,

@@ -17,7 +17,7 @@ const Show = ({ show, searchItem, setSearchItem }) => {
   return (
     <div className="rounded-b-lg w-[60%] my-10 mx-auto  bg-base-100 shadow-xl">
       <div className="flex">
-        <div>
+        <div className="">
           <img
             src={service_img}
             alt=""
