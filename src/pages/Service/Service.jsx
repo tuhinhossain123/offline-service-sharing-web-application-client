@@ -1,40 +1,9 @@
 /* eslint-disable react/prop-types */
-import axios from "axios";
+
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
 
-const Service = ({ service }) => {
+const Service = ({ service, handleDelete }) => {
   const { _id, service_img, service_name } = service;
-
-  const handleDelete = (_id) => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        axios
-          .delete(`http://localhost:5000/services/${_id}`)
-          .then((data) => {
-            console.log(data);
-            if (data.deletedCount > 0) {
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success",
-              });
-            }
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      }
-    });
-  };
 
   return (
     <div className="rounded-b-lg bg-base-100 shadow-xl">

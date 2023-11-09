@@ -1,5 +1,8 @@
+
+import { ToastContainer, toast } from 'react-toastify';
 import axios from "axios";
 import ServiceFrom from "../../components/ServiceFrom/ServiceFrom";
+
 
 const AddService = () => {
   const handleSubmit = (e) => {
@@ -28,10 +31,15 @@ const AddService = () => {
 
     console.log(user);
 
+    
+
     axios
       .post("http://localhost:5000/services", user)
       .then((data) => {
         console.log(data);
+        if(data.insertedId){
+          toast('User services Added')
+        }
       })
       .catch((error) => {
         console.log(error);

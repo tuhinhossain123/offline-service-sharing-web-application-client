@@ -1,3 +1,5 @@
+
+import { ToastContainer, toast } from 'react-toastify';
 import axios from "axios";
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
@@ -5,11 +7,10 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const UpdateService = () => {
   const data = useLoaderData();
-  // console.log(data);
   const { user } = useContext(AuthContext);
 
   const handleUpdate = (e) => {
-    e.preventDefault(); // Prevent the form from submitting and the page from refreshing
+    e.preventDefault(); 
 
     const form = e.target;
     const name = form.name.value;
@@ -20,7 +21,7 @@ const UpdateService = () => {
     const service_area = form.service_area.value;
     const service_des = form.service_des.value;
 
-    // Get the user object from the context
+    
     const user = {
       name,
       email,
@@ -30,12 +31,16 @@ const UpdateService = () => {
       service_area,
       service_des,
     };
+    console.log(user)
 
-    // Use axios.patch with the correct URL
+  
     axios
       .patch(`http://localhost:5000/services/${data._id}`, user)
       .then((data) => {
         console.log(data);
+        if(data.data.modifiedCount > 0){
+          toast('User Services Update')
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -86,6 +91,7 @@ const UpdateService = () => {
                 name="service_img"
                 placeholder="URL"
                 className="input input-bordered w-full"
+                defaultValue={data.service_img}
               />
             </label>
           </div>
@@ -145,6 +151,7 @@ const UpdateService = () => {
         </div>
         <div className="flex justify-center">
           <button className="btn btn-block bg-gray-200 mt-3">Update</button>
+          <ToastContainer />
         </div>
       </form>
     </div>
