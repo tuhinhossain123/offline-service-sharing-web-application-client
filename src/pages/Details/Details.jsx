@@ -2,6 +2,8 @@ import axios from "axios";
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Details = () => {
   const details = useLoaderData();
@@ -35,6 +37,9 @@ const Details = () => {
       .post("http://localhost:5000/booking", userInfo)
       .then((data) => {
         console.log(data);
+        if(data.data.insertedId){
+          toast('User Services Booking Added');
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -43,6 +48,7 @@ const Details = () => {
 
   return (
     <div className="flex items-start justify-between gap-5 w-[60%] mx-auto my-16">
+       <ToastContainer />
       <div className="flex justify-center text-center items-center w-[30%]">
         <div className="">
           <img

@@ -106,6 +106,20 @@ const Navbar = () => {
                       My Schedules
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink
+                      to="/myPendingWork"
+                      className={({ isActive, isPending }) =>
+                        isPending
+                          ? "pending"
+                          : isActive
+                          ? "text-slate-600 underline font-medium"
+                          : ""
+                      }
+                    >
+                      My Pending Work
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             </NavLink>

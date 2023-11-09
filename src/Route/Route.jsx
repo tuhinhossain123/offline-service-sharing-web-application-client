@@ -11,6 +11,7 @@ import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
 import AllServices from "../pages/AllServices/AllServices";
 import Details from "../pages/Details/Details";
 import MySchedules from "../pages/MySchedules/MySchedules";
+import MyPendingWorks from "../pages/MyPendingWorks/MyPendingWorks";
 
 
 const router = createBrowserRouter([
@@ -58,8 +59,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/mySchedules',
-        element: <MySchedules></MySchedules>,
-        loader:()=>fetch('http://localhost:5000/booking')
+        element: <PrivateRoute><MySchedules></MySchedules></PrivateRoute>,
+      },
+      {
+        path: "/myPendingWork",
+        element :<PrivateRoute> <MyPendingWorks></MyPendingWorks></PrivateRoute>,
       }
      
     ]

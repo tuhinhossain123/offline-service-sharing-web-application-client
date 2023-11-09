@@ -2,12 +2,12 @@
 
 import { useContext } from "react";
 import { AuthContext } from "../../pages/Provider/AuthProvider";
-import { ToastContainer } from "react-toastify";
 
 const ServiceFrom = ({ handleSubmit }) => {
   const { user } = useContext(AuthContext);
   return (
     <div className="px-10 mt-5 mb-1">
+     
       <h2 className="text-3xl font-semibold text-center mb-3">Add Service</h2>
       <form onSubmit={handleSubmit} className="w-full md:w-[60%] mx-auto">
         <div className="md:flex justify-center gap-10 mb-2">
@@ -124,7 +124,7 @@ const ServiceFrom = ({ handleSubmit }) => {
         </div>
         <div className="flex justify-center">
           <button className="btn btn-block bg-gray-200 mt-3 ">Add</button>
-          <ToastContainer />
+          
           
         </div>
       </form>

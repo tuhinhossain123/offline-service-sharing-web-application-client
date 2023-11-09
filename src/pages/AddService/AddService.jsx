@@ -1,10 +1,12 @@
 
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import axios from "axios";
 import ServiceFrom from "../../components/ServiceFrom/ServiceFrom";
+import { useNavigate} from 'react-router-dom';
 
 
 const AddService = () => {
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -37,8 +39,9 @@ const AddService = () => {
       .post("http://localhost:5000/services", user)
       .then((data) => {
         console.log(data);
-        if(data.insertedId){
-          toast('User services Added')
+        if(data.data.insertedId){
+          toast('User services Added');
+          navigate("/allServices")
         }
       })
       .catch((error) => {
