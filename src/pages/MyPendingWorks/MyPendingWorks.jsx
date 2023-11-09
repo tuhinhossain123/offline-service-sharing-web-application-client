@@ -20,7 +20,7 @@ const MyPendingWorks = () => {
   }, [user]);
   return (
     <div>
-      <div className="grid grid-cols-2 gap-10 w-[60%] mx-auto my-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[60%] mx-auto my-16">
         {myServices?.length == 0 ? (
           <p className="text-xl font-bold text-center">No Booking</p>
         ) : (

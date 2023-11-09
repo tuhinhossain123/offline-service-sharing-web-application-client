@@ -223,7 +223,7 @@ const Navbar = () => {
                   onClick={handleLogOut}
                   className="p-3 font-bold rounded  bg-[#02a388] text-white"
                 >
-                  Register
+                  Log Out
                 </button>
               </div>
             </>

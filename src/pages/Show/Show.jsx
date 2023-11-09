@@ -16,17 +16,17 @@ const Show = ({ show, searchItem, setSearchItem }) => {
  
   return (
     <div className="rounded-b-lg w-[60%] my-10 mx-auto  bg-base-100 shadow-xl">
-      <div className="flex">
-        <div className="">
+      <div className="flex justify-between w-full">
+        <div className="w-[50%]">
           <img
             src={service_img}
             alt=""
-            className="rounded-l-lg w-full h-full"
+            className="rounded-l-lg  h-full"
           />
         </div>
-        <div className="p-5 space-y-3 rounded-r-lg">
+        <div className="p-5 space-y-3 rounded-r-lg w-[50%]">
           <h2 className="text-2xl font-semibold">{service_name}</h2>
-          <p className="font-lg font-semibold text-gray-400">
+          <p className="font-lg font-semibold text-gray-400 ">
             {service_des.slice(0, 90)}...
           </p>
           <div className="flex justify-between items-center">
