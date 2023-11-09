@@ -21,7 +21,9 @@ const ManageService = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/services/${_id}`)
+          .delete(
+            `https://offline-service-sharing-web-application-crud.vercel.app/services/${_id}`
+          )
           .then((data) => {
             console.log(data.data);
             if (data.data.deletedCount > 0) {

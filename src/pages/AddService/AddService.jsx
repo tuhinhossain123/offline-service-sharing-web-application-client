@@ -1,9 +1,7 @@
-
-import {  toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import axios from "axios";
 import ServiceFrom from "../../components/ServiceFrom/ServiceFrom";
-import { useNavigate} from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 const AddService = () => {
   const navigate = useNavigate();
@@ -33,15 +31,16 @@ const AddService = () => {
 
     console.log(user);
 
-    
-
     axios
-      .post("http://localhost:5000/services", user)
+      .post(
+        "https://offline-service-sharing-web-application-crud.vercel.app/services",
+        user
+      )
       .then((data) => {
         console.log(data);
-        if(data.data.insertedId){
-          toast('User services Added');
-          navigate("/allServices")
+        if (data.data.insertedId) {
+          toast("User services Added");
+          navigate("/allServices");
         }
       })
       .catch((error) => {

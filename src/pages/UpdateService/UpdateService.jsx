@@ -1,5 +1,4 @@
-
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
@@ -10,7 +9,7 @@ const UpdateService = () => {
   const { user } = useContext(AuthContext);
 
   const handleUpdate = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const form = e.target;
     const name = form.name.value;
@@ -21,7 +20,6 @@ const UpdateService = () => {
     const service_area = form.service_area.value;
     const service_des = form.service_des.value;
 
-    
     const user = {
       name,
       email,
@@ -31,15 +29,17 @@ const UpdateService = () => {
       service_area,
       service_des,
     };
-    console.log(user)
+    console.log(user);
 
-  
     axios
-      .patch(`http://localhost:5000/services/${data._id}`, user)
+      .patch(
+        `https://offline-service-sharing-web-application-crud.vercel.app/services/${data._id}`,
+        user
+      )
       .then((data) => {
         console.log(data);
-        if(data.data.modifiedCount > 0){
-          toast('User Services Update')
+        if (data.data.modifiedCount > 0) {
+          toast("User Services Update");
         }
       })
       .catch((error) => {

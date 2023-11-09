@@ -11,7 +11,9 @@ const MyPendingWorks = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/pendingWork/${user?.email}`)
+      .get(
+        `https://offline-service-sharing-web-application-crud.vercel.app/pendingWork/${user?.email}`
+      )
       .then((data) => {
         setMyServices(data.data);
       });

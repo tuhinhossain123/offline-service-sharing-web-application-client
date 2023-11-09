@@ -13,60 +13,96 @@ import Details from "../pages/Details/Details";
 import MySchedules from "../pages/MySchedules/MySchedules";
 import MyPendingWorks from "../pages/MyPendingWorks/MyPendingWorks";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     errorElement: <ErrorPage></ErrorPage>,
-    children:[
+    children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/services')
+        loader: () =>
+          fetch(
+            "https://offline-service-sharing-web-application-crud.vercel.app/services"
+          ),
       },
       {
-        path: '/login',
-        element: <Login></Login>
+        path: "/login",
+        element: <Login></Login>,
       },
       {
-        path: '/register',
-        element: <Register></Register>
+        path: "/register",
+        element: <Register></Register>,
       },
       {
-        path: '/addServices',
-        element: <PrivateRoute><AddService></AddService></PrivateRoute>,
+        path: "/addServices",
+        element: (
+          <PrivateRoute>
+            <AddService></AddService>
+          </PrivateRoute>
+        ),
       },
       {
-        path: '/manageServices',
-        element:<PrivateRoute> <ManageService></ManageService></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/services')
+        path: "/manageServices",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <ManageService></ManageService>
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch(
+            "https://offline-service-sharing-web-application-crud.vercel.app/services"
+          ),
       },
       {
-        path: '/update/:id',
+        path: "/update/:id",
         element: <UpdateService></UpdateService>,
-        loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+        loader: ({ params }) =>
+          fetch(
+            `https://offline-service-sharing-web-application-crud.vercel.app/services/${params.id}`
+          ),
       },
       {
-        path: '/allServices',
+        path: "/allServices",
         element: <AllServices></AllServices>,
-        loader: ()=> fetch('http://localhost:5000/services')
+        loader: () =>
+          fetch(
+            "https://offline-service-sharing-web-application-crud.vercel.app/services"
+          ),
       },
       {
-        path: '/details/:id',
-        element:<PrivateRoute> <Details></Details></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+        path: "/details/:id",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Details></Details>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://offline-service-sharing-web-application-crud.vercel.app/services/${params.id}`
+          ),
       },
       {
-        path: '/mySchedules',
-        element: <PrivateRoute><MySchedules></MySchedules></PrivateRoute>,
+        path: "/mySchedules",
+        element: (
+          <PrivateRoute>
+            <MySchedules></MySchedules>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/myPendingWork",
-        element :<PrivateRoute> <MyPendingWorks></MyPendingWorks></PrivateRoute>,
-      }
-     
-    ]
+        element: (
+          <PrivateRoute>
+            {" "}
+            <MyPendingWorks></MyPendingWorks>
+          </PrivateRoute>
+        ),
+      },
+    ],
   },
 ]);
 

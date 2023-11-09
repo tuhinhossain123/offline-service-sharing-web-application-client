@@ -45,19 +45,28 @@ const AuthProvider = ({ children }) => {
 
       if (currentUser) {
         axios
-          .post("http://localhost:5000/jwt", loggedUser, {
-            withCredentials: true,
-          })
+          .post(
+            "https://offline-service-sharing-web-application-crud.vercel.app/jwt",
+            loggedUser,
+            {
+              withCredentials: true,
+            }
+          )
           .then((res) => {
             console.log("token response", res.data);
           });
       } else {
-        axios.post("http://localhost:5000/logout", loggedUser, {
-          withCredentials: true,
-        })
-        .then(res =>{
-          console.log(res.data)
-        })
+        axios
+          .post(
+            "https://offline-service-sharing-web-application-crud.vercel.app/logout",
+            loggedUser,
+            {
+              withCredentials: true,
+            }
+          )
+          .then((res) => {
+            console.log(res.data);
+          });
       }
     });
 

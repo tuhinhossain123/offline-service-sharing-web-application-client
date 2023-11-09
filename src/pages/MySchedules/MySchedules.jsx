@@ -1,4 +1,3 @@
-
 import Booking from "../Booking/Booking";
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
@@ -10,10 +9,12 @@ const MySchedules = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/booking/${user?.email}`)
+      .get(
+        `https://offline-service-sharing-web-application-crud.vercel.app/booking/${user?.email}`
+      )
       .then((data) => {
         setMyServices(data.data);
-      })
+      });
 
     console.log(myServices);
   }, [user]);
@@ -27,10 +28,8 @@ const MySchedules = () => {
           <Booking key={booking._id} booking={booking}></Booking>
         ))
       )}
-     
     </div>
   );
 };
 
 export default MySchedules;
-
