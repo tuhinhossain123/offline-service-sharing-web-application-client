@@ -15,7 +15,6 @@ const Footer = () => {
           <header className="footer-title text-white">contact</header>
          <p>0182344654657</p>
          <p>0182344654657</p>
-         <p>0182344654657</p>
         </nav>
         <nav className="text-white">
           <header className="footer-title">address</header>
@@ -33,7 +32,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="flex justify-center mt-6 text-white">
-        <p>Copyright © 2023 - All right reserved by Local Tours and Guide</p>
+        <p>Copyright © 2023 - All right reserved.</p>
       </div>
     </div>
   );
