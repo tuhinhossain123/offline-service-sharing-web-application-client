@@ -17,5 +17,5 @@
   - firebase
   - Node.js
   - MongoDb
-  -Express
-  -JWT
+  - Express
+  - JWT
