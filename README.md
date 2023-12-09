@@ -8,7 +8,7 @@
 * Securing the data through jwt
 * Deploying the website to vercel live link creating
 
-  ##
+  ## Technologies
   - Html
   - Tailwind
   - Daisy Ui
