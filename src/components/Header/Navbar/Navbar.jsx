@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { AuthContext } from "../../../pages/Provider/AuthProvider";
-import logo from "../../../assets/logo.jpeg";
+import logo from "../../../assets/logo.png";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -163,7 +163,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="px-10 bg-teal-50">
+    <div className="">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -185,20 +185,17 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100  w-52"
             >
               {links}
             </ul>
           </div>
-          <div className="">
-            <img
-              src={logo}
+          <div>
+            {/* <img
+              src={}
               alt=""
-              className="w-14 h-14 rounded-full mx-auto mb-0"
-            />
-            <h2 className="text-sm font-semibold ml-2 font-mono text-sky-600 text-center">
-              Local Tours & Guide
-            </h2>
+              className="w mb-0"
+            /> */}
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

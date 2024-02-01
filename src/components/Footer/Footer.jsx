@@ -1,39 +1,59 @@
-import logo from "../../assets/logo.jpeg";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+import logo from "../../assets/logo.png";
+import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="p-6 bg-black text-base-content mt-16">
-      <div className="footer ">
-        <div>
-          <img src={logo} alt="" className="w-[100px] h-[100px] mb-3" />
-          <p className="text-2xl text-white font-bold">Local Tours and Guide</p>
+    <div className="bg-[#3e7172] p-10 text-white">
+      <div className="flex justify-between">
+        <div className="space-y-4">
+          <div className=" gap-5">
+            <img
+              src="https://demo.phlox.pro/agency-tour/wp-content/uploads/sites/333/2020/12/logo1.svg"
+              alt=""
+            />
+          </div>
+          <p className="text-xl">
+            While the lovely valley teems with vapour <br /> around me, and the
+            meridian sun strikes the <br /> upper surface of the impenetrable
+            foliage of <br /> my trees.
+          </p>
         </div>
-        <nav className="text-white">
-          <header className="footer-title text-white">contact</header>
-         <p>0182344654657</p>
-         <p>0182344654657</p>
-        </nav>
-        <nav className="text-white">
-          <header className="footer-title">address</header>
-          <a className="link link-hover">Chittagong</a>
-          <a className="link link-hover">Cumilla</a>
-          <a className="link link-hover">Dhaka</a>
-        </nav>
-        <nav className="text-white">
-          <header className="footer-title">social media</header>
-         <div className="flex gap-5">
-         <a className="link link-hover"> <FaFacebookSquare className="text-3xl"></FaFacebookSquare></a>
-          <a className="link link-hover"><FaTwitter className="text-3xl"></FaTwitter></a>
-          <a className="link link-hover"><FcGoogle className="text-3xl"></FcGoogle></a>
-         </div>
-        </nav>
+        <div>
+          <div className="grid grid-flow-col gap-12">
+            <Link>
+              <FaFacebookF className="text-3xl" />
+            </Link>
+            <a>
+              <FaLinkedinIn className="text-3xl" />
+            </a>
+            <a>
+              <FaTelegramPlane className="text-3xl" />
+            </a>
+            <a>
+              <FaInstagram className="text-3xl" />
+            </a>
+          </div>
+          <div className="my-14 mr-9">
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Enter Your Email"
+              className="bg-white text-black border-none px-3 py-4 w-3/5 rounded-l-lg pl-4"
+            />
+            <button className="px-3 py-4 font-bold rounded-none rounded-r-lg bg-red-500 text-white">
+              Subscribe
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="flex justify-center mt-6 text-white">
-        <p>Copyright © 2023 - All right reserved.</p>
-      </div>
+
+      <hr className="mt-16 h-2" />
+      <p className="py-4">© 2024 - All right reserved by ACME Industries Ltd</p>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const Home = () => {
           Popular Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[70%] mx-auto">
-          {popularService?.slice(0, 4).map((service) => (
+          {popularService?.slice(0, 4)?.map((service) => (
             <Services key={service._id} service={service}></Services>
           ))}
         </div>
