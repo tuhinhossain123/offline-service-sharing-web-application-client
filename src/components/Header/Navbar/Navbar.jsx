@@ -1,238 +1,130 @@
-import { useContext } from "react";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { IoMenuOutline } from "react-icons/io5";
+import { RxCross2 } from "react-icons/rx";
 import { AuthContext } from "../../../pages/Provider/AuthProvider";
-import logo from "../../../assets/logo.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useContext, useState } from "react";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const { id } = useParams();
-
-  const handleLogOut = () => {
-    logOut()
-      .then(() => console.log("login success"))
-      .catch((error) => {
-        console.error(error);
-      });
+  const [menu, setMenu] = useState(false);
+  const handleMenu = () => {
+    setMenu(!menu);
   };
 
-  const links = (
-    <>
-      <li>
-        <NavLink
-          to="/"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "text-slate-600 underline font-medium"
-              : ""
-          }
-        >
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/allServices"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "text-slate-600 underline font-medium"
-              : ""
-          }
-        >
-          All Services
-        </NavLink>
-      </li>
-      {user && (
-        <>
-          <li>
-            <NavLink
-              to="/manageServices"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? "text-slate-600 underline font-medium"
-                  : ""
-              }
-            >
-              Manage Services
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? " " : ""
-              }
-            >
-              <div className="dropdown dropdown-bottom">
-                <label tabIndex={0} className="text-black">
-                  Dashboard
-                </label>
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-                >
-                  <li>
-                    <a>My-services</a>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/addServices"
-                      className={({ isActive, isPending }) =>
-                        isPending
-                          ? "pending"
-                          : isActive
-                          ? "text-slate-600 underline font-medium"
-                          : ""
-                      }
-                    >
-                      Add Service
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/mySchedules"
-                      className={({ isActive, isPending }) =>
-                        isPending
-                          ? "pending"
-                          : isActive
-                          ? "text-slate-600 underline font-medium"
-                          : ""
-                      }
-                    >
-                      My Schedules
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/myPendingWork"
-                      className={({ isActive, isPending }) =>
-                        isPending
-                          ? "pending"
-                          : isActive
-                          ? "text-slate-600 underline font-medium"
-                          : ""
-                      }
-                    >
-                      My Pending Work
-                    </NavLink>
-                  </li>
-                </ul>
-              </div>
-            </NavLink>
-          </li>
-        </>
-      )}
-      {/* {user ? (
-        ""
-      ) : (
-        <>
-          <li>
-            <NavLink
-              to="/register"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? "text-slate-600 underline font-medium"
-                  : ""
-              }
-            >
-              Register
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/login"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? "text-slate-600 underline font-medium"
-                  : ""
-              }
-            >
-              Login
-            </NavLink>
-          </li>
-        </>
-      )} */}
-    </>
-  );
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch((error) => console.log(error));
+    toast("sing up successfully");
+  };
   return (
-    <div className="">
-      <div className="navbar">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+    <div className="sticky z-10 top-0">
+      <nav className="flex flex-col md:flex-row md:items-center justify-between px-10 py-3">
+        <div className="nav-left flex items-center justify-between w-full md:w-fit">
+          <Link to={"/"}>
+            <h2>
+              <img
+                src="https://demo.phlox.pro/agency-tour/wp-content/uploads/sites/333/2020/12/logo1.svg"
+                alt=""
+              />
+            </h2>
+          </Link>
+          <div className="menu-btn md:hidden flex items-center justify-between duration-1000 ">
+            {menu ? (
+              <p
+                onClick={handleMenu}
+                className="text-teal-500 text-4xl duration-1000 "
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100  w-52"
-            >
-              {links}
-            </ul>
-          </div>
-          <div>
-            {/* <img
-              src={}
-              alt=""
-              className="w mb-0"
-            /> */}
+                <RxCross2></RxCross2>
+              </p>
+            ) : (
+              <p
+                onClick={handleMenu}
+                className="text-teal-500 text-4xl duration-1000 "
+              >
+                <IoMenuOutline></IoMenuOutline>
+              </p>
+            )}
           </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+        <div className="nav-center">
+          <ul
+            className={`flex flex-col md:flex-row items-center justify-center absolute md:static  ${
+              menu ? "top-[3.4rem]" : "-top-48"
+            }  rounded-md duration-500 py-4 px-3 z-10 `}
+          >
+            <li>
+              <NavLink
+                to={"/"}
+                className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172] focus:text-[#3e7172] duration-500 "
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"/allServices"}
+                className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172] focus:text-[#3e7172]  duration-500"
+              >
+                All Services
+              </NavLink>
+            </li>
+
+            {user ? (
+              <li>
+                <NavLink
+                  to={"/manageServices"}
+                  className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172] focus:text-[#3e7172]  duration-500"
+                >
+                  Manage Service
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
+            {user ? (
+              <li>
+                <NavLink
+                  to={"/dashboard"}
+                  className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172] focus:text-[#3e7172]  duration-500"
+                >
+                  Dashboard
+                </NavLink>
+              </li>
+            ) : (
+              ""
+            )}
+          </ul>
         </div>
-        <div className="navbar-end">
+        <div className="nav-right hidden md:block ">
           {user ? (
             <>
-              <div className="flex">
-                <div className="hidden  md:flex items-center">
-                  <span className="mr-4">{user.email}</span>
-                  <label
-                    tabIndex={0}
-                    className="btn btn-ghost btn-circle avatar"
-                  >
-                    <div className="w-10 rounded-full">
-                      <img src={user?.photoURL} />
-                    </div>
-                  </label>
-                </div>
-                <button
-                  onClick={handleLogOut}
-                  className="p-3 font-bold rounded  bg-[#02a388] text-white"
+              <button onClick={handleLogout}>
+                <Link
+                  // to={"/login"}
+                  className="px-10 py-4 text-white bg-[#3e7172] text-xl font-semibold  rounded flex flex-col items-center justify-center  hover:transform hover:scale-110 duration-500"
                 >
-                  Log Out
-                </button>
-              </div>
+                  Sign Out
+                </Link>
+              </button>
             </>
           ) : (
-            <Link to="/login">
-              <button className="p-3 font-bold rounded  bg-[#02a388] text-white">
-                Login
+            <>
+              <button>
+                <Link
+                  to={"/login"}
+                  className="px-10 py-4 text-xl font-semibold  bg-[#3e7172] text-white rounded flex flex-col items-center justify-center  hover:transform hover:scale-110 duration-500"
+                >
+                  Sign In
+                </Link>
               </button>
-            </Link>
+              <ToastContainer />
+            </>
           )}
         </div>
-      </div>
+      </nav>
     </div>
   );
 };
