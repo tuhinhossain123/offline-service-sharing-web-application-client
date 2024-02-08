@@ -5,6 +5,7 @@ import { AuthContext } from "../../../pages/Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useContext, useState } from "react";
+import logo from "../../../assets/logo.svg";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -20,17 +21,12 @@ const Navbar = () => {
     toast("sing up successfully");
   };
   return (
-    <div className="sticky z-10 top-0">
+    <div className="bg-[#caf0f0] z-10  top-0">
       <nav className="flex flex-col md:flex-row md:items-center justify-between px-10 py-3">
         <div className="nav-left flex items-center justify-between w-full md:w-fit">
-          <Link to={"/"}>
-            <h2>
-              <img
-                src="https://demo.phlox.pro/agency-tour/wp-content/uploads/sites/333/2020/12/logo1.svg"
-                alt=""
-              />
-            </h2>
-          </Link>
+          <div className="w-[6rem] md-[8rem]">
+            <img src={logo} alt="" className="w-full"/>
+          </div>
           <div className="menu-btn md:hidden flex items-center justify-between duration-1000 ">
             {menu ? (
               <p
@@ -58,7 +54,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to={"/"}
-                className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172] focus:text-[#3e7172] duration-500 "
+                className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172]  duration-500 "
               >
                 Home
               </NavLink>
@@ -66,7 +62,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to={"/allServices"}
-                className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172] focus:text-[#3e7172]  duration-500"
+                className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172]  duration-500"
               >
                 All Services
               </NavLink>
@@ -76,7 +72,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/manageServices"}
-                  className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172] focus:text-[#3e7172]  duration-500"
+                  className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172]  duration-500"
                 >
                   Manage Service
                 </NavLink>
@@ -88,7 +84,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/dashboard"}
-                  className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172] focus:text-[#3e7172]  duration-500"
+                  className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172]  duration-500"
                 >
                   Dashboard
                 </NavLink>
