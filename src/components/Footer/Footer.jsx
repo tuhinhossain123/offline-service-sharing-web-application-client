@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-[#3e7172] px-10 pt-6 text-white">
+    <div className="bg-[#3e7172] px-8 md:px-16  pt-10 text-white">
       <div>
         <div className="w-[8rem] md:w-[10rem]">
           <img
@@ -43,7 +43,7 @@ const Footer = () => {
         <p className="text-sm md:text-xl text-center">
           © 2024 - All right reserved by ACME Industries Ltd
         </p>
-        <div className="grid grid-flow-col gap-16 pb-8">
+        <div className="grid grid-flow-col gap-10 md:gap-16 pb-8">
           <Link>
             <FaFacebookF className="text-3xl" />
           </Link>

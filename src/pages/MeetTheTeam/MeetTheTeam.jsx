@@ -1,9 +1,6 @@
-import img1 from "../../assets/1.png";
-import img2 from "../../assets/2.png";
-import img4 from "../../assets/4.png";
-import img5 from "../../assets/5.png";
-import img6 from "../../assets/6.png";
-import img7 from "../../assets/7.png";
+import img1 from "../../assets/5.png";
+import img2 from "../../assets/6.png";
+import img4 from "../../assets/7.png";
 import { motion } from "framer-motion";
 
 const MeetTheTeam = () => {
@@ -44,33 +41,6 @@ const MeetTheTeam = () => {
               <h2 className="text-2xl font-semibold">Rashedul Islam</h2>
               <p className="font-lg font-semibold text-red-600">
                 Guide Acquisition Specialist
-              </p>
-            </div>
-          </div>
-          <div className="rounded-b-lg bg-base-100 shadow-xl">
-            <img src={img5} alt="" className="rounded-t-lg w-full" />
-            <div className="space-y-4 mt-4 pl-3 mb-6">
-              <h2 className="text-2xl font-semibold">Foridul Islam</h2>
-              <p className="font-lg font-semibold text-red-600">
-                Team Leader, Quality Experience
-              </p>
-            </div>
-          </div>
-          <div className="rounded-b-lg bg-base-100 shadow-xl">
-            <img src={img6} alt="" className="rounded-t-lg w-full" />
-            <div className="space-y-4 mt-4 pl-3 mb-6">
-              <h2 className="text-2xl font-semibold">Sojib Hossain</h2>
-              <p className="font-lg font-semibold text-red-600">
-                Customer Support
-              </p>
-            </div>
-          </div>
-          <div className="  bg-base-100 shadow-xl rounded-b-lg">
-            <img src={img7} alt="" className="rounded-t-lg w-full" />
-            <div className="space-y-4 mt-4 pl-3 mb-6">
-              <h2 className="text-2xl font-semibold">Raju Hossain</h2>
-              <p className="font-lg font-semibold text-red-600">
-                Tour Connection Specialist
               </p>
             </div>
           </div>

@@ -21,7 +21,7 @@ const Navbar = () => {
     toast("sing up successfully");
   };
   return (
-    <div className="bg-[#caf0f0] z-10  top-0">
+    <div className="bg-gray-50 top-0">
       <nav className="flex flex-col md:flex-row md:items-center justify-between px-10 py-3">
         <div className="nav-left flex items-center justify-between w-full md:w-fit">
           <div className="w-[6rem] md-[8rem]">
@@ -54,7 +54,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to={"/"}
-                className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172]  duration-500 "
+                className=" px-5 py-1 text-[1.5rem] text-black font-semibold hover:text-[#3e7172]  duration-500 "
               >
                 Home
               </NavLink>
@@ -62,7 +62,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to={"/allServices"}
-                className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172]  duration-500"
+                className=" px-5 py-1 text-[1.5rem] text-black font-semibold hover:text-[#3e7172]  duration-500"
               >
                 All Services
               </NavLink>
@@ -72,7 +72,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/manageServices"}
-                  className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172]  duration-500"
+                  className=" px-5 py-1 text-[1.5rem] text-black font-semibold hover:text-[#3e7172]  duration-500"
                 >
                   Manage Service
                 </NavLink>
@@ -84,7 +84,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/dashboard"}
-                  className=" px-5 py-1 text-xl text-black font-semibold hover:text-[#3e7172]  duration-500"
+                  className=" px-5 py-1 text-[1.5rem] text-black font-semibold hover:text-[#3e7172]  duration-500"
                 >
                   Dashboard
                 </NavLink>
