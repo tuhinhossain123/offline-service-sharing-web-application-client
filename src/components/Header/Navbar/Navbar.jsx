@@ -5,7 +5,8 @@ import { AuthContext } from "../../../pages/Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useContext, useState } from "react";
-import logo from "../../../assets/logo.svg";
+// import logo from "../../../assets/logo.svg";
+import logo from "../../../assets/footer.svg"
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -21,7 +22,7 @@ const Navbar = () => {
     toast("sing up successfully");
   };
   return (
-    <div className="bg-gray-50 top-0">
+    <div className="bg-white top-0">
       <nav className="flex flex-col md:flex-row md:items-center justify-between px-10 py-3">
         <div className="nav-left flex items-center justify-between w-full md:w-fit">
           <div className="w-[6rem] md-[8rem]">
@@ -54,7 +55,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to={"/"}
-                className=" px-5 py-1 text-[1.5rem] text-black font-semibold hover:text-[#3e7172]  duration-500 "
+                className=" px-5 py-1 text-[1.5rem] text-black hover:text-[#3e7172]   duration-500 "
               >
                 Home
               </NavLink>
@@ -62,7 +63,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to={"/allServices"}
-                className=" px-5 py-1 text-[1.5rem] text-black font-semibold hover:text-[#3e7172]  duration-500"
+                className=" px-5 py-1 text-[1.5rem] text-black  hover:text-gray-500    duration-500"
               >
                 All Services
               </NavLink>
@@ -72,7 +73,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/manageServices"}
-                  className=" px-5 py-1 text-[1.5rem] text-black font-semibold hover:text-[#3e7172]  duration-500"
+                  className=" px-5 py-1 text-[1.5rem] text-black  hover:text-gray-500   duration-500"
                 >
                   Manage Service
                 </NavLink>
@@ -84,7 +85,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   to={"/dashboard"}
-                  className=" px-5 py-1 text-[1.5rem] text-black font-semibold hover:text-[#3e7172]  duration-500"
+                  className=" px-5 py-1 text-[1.5rem] text-black  hover:text-gray-500  duration-500"
                 >
                   Dashboard
                 </NavLink>
@@ -100,7 +101,7 @@ const Navbar = () => {
               <button onClick={handleLogout}>
                 <Link
                   // to={"/login"}
-                  className="px-10 py-4 text-white bg-[#3e7172] text-xl font-semibold  rounded flex flex-col items-center justify-center  hover:transform hover:scale-110 duration-500"
+                  className="px-10 py-4 text-white bg-[#3e7172] text-xl font-semibold  rounded-lg flex flex-col items-center justify-center  hover:transform hover:scale-110 duration-500"
                 >
                   Sign Out
                 </Link>
@@ -111,7 +112,7 @@ const Navbar = () => {
               <button>
                 <Link
                   to={"/login"}
-                  className="px-10 py-4 text-xl font-semibold  bg-[#3e7172] text-white rounded flex flex-col items-center justify-center  hover:transform hover:scale-110 duration-500"
+                  className="px-10 py-4 text-xl font-semibold  bg-[#3e7172] text-white rounded-lg flex flex-col items-center justify-center  hover:transform hover:scale-110 duration-500"
                 >
                   Sign In
                 </Link>

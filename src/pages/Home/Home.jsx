@@ -4,34 +4,47 @@ import FollowUs from "../FollowUs/FollowUs";
 import MeetTheTeam from "../MeetTheTeam/MeetTheTeam";
 import Review from "../Review/Review";
 import Services from "../Services/Services";
+import bgimg from "../../assets/bg.svg";
 
 const Home = () => {
   const popularService = useLoaderData();
 
   return (
     <>
-      <Banner></Banner>
-      <div className="my-16 px-10">
-        <h2 className="text-5xl text-[#3e7172] font-semibold mb-10">
+      <div className="">
+        <Banner></Banner>
+      </div>
+      <div
+        style={{
+          backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0)), url(${bgimg})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="px-6 md:px-10 md:my-16 my-10"
+      >
+        <h2 className="text-4xl md:px-10 pb-4 md:-pb-0 md:text-5xl text-[#3e7172] font-semibold ">
           Popular Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 ">
-          {popularService?.slice(0, 6)?.map((service) => (
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:p-8">
+          {popularService?.slice(0, 3)?.map((service) => (
             <Services key={service._id} service={service}></Services>
           ))}
         </div>
-        <div className="flex justify-center my-10">
+
+        <div className="flex justify-center">
           <Link
             to="/allServices"
-            className="py-2 px-4 rounded bg-white border-2 text-teal-500 border-teal-500 font-semibold"
+            className="py-2 px-4 text-2xl rounded  border-b-4 border-[#3e7172] text-[#3e7172]  font-semibold"
           >
-            Show All
+            See All
           </Link>
         </div>
       </div>
-      <Review></Review>
-      <MeetTheTeam></MeetTheTeam>
-      <FollowUs></FollowUs>
+      {/* <Review></Review> */}
+      {/* <MeetTheTeam></MeetTheTeam> */}
+      {/* <FollowUs></FollowUs> */}
     </>
   );
 };
