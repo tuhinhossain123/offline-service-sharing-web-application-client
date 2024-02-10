@@ -6,14 +6,12 @@ const Services = ({ service }) => {
     _id,
     service_img,
     service_name,
-    service_provider_img,
-    service_provider_name,
     service_price,
     service_des,
   } = service;
 
   return (
-    <div className="rounded-b-lg bg-gray-50 shadow-md hover:shadow-2xl hover-shadow-gray-800 text-gray-500">
+    <div className="rounded-t-lg bg-gray-50 shadow-md hover:shadow-2xl hover-shadow-gray-800 text-gray-500">
       <div className="md:h-[35rem]">
         <img src={service_img} alt="" className=" h-full w-full" />
       </div>

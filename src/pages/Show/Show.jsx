@@ -6,52 +6,33 @@ const Show = ({ show, searchItem, setSearchItem }) => {
     _id,
     service_img,
     service_name,
-    service_provider_img,
-    service_provider_name,
     service_price,
     service_des,
-    service_area,
   } = show;
-   
- 
+
   return (
-    <div className="rounded-b-lg w-[60%] my-10 mx-auto  bg-base-100 shadow-xl">
-      <div className="flex justify-between w-full">
-        <div className="w-[50%]">
-          <img
-            src={service_img}
-            alt=""
-            className="rounded-l-lg  h-full"
-          />
-        </div>
-        <div className="p-5 space-y-3 rounded-r-lg w-[50%]">
-          <h2 className="text-2xl font-semibold">{service_name}</h2>
-          <p className="font-lg font-semibold text-gray-400 ">
-            {service_des.slice(0, 90)}...
-          </p>
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-5">
-              <img
-                src={service_provider_img}
-                alt=""
-                className="rounded-full w-10"
-              />
-              <h2 className="font-semibold">{service_provider_name}</h2>
-            </div>
-            <h2>{service_area}</h2>
-          </div>
-          <div className="flex items-center justify-between">
-            <p className="">
-              {" "}
-              <span className="text-xl text-red-500 font-bold">
-                Price:
-              </span>{" "}
-              {service_price}
-            </p>
-            <Link to={`/details/${_id}`}  className="py-2 px-3 rounded bg-[#02a388] font-semibold text-white">
-              View Details
-            </Link>
-          </div>
+    <div className="rounded-t-lg bg-gray-50 shadow-md hover:drop-shadow-2xl hover-shadow-[#3e7172] text-gray-500">
+      <div className="">
+        <img src={service_img} alt="" className="rounded-l-lg  h-full" />
+      </div>
+      <div className="p-5 space-y-3 rounded-r-lg">
+        <h2 className="text-3xl font-semibold text-black">{service_name}</h2>
+        <p className="font-lg font-semibold text-gray-400 ">
+          {service_des.slice(0, 90)}...
+        </p>
+        <div className="flex items-center justify-between">
+        <h2>
+              <span className="text-lg ">Price: </span>
+              <span className="text-2xl font-bold pr-2">
+                ${service_price}
+              </span>
+            </h2>
+          <Link
+            to={`/details/${_id}`}
+            className="py-2 px-3 rounded bg-[#3e7172] font-semibold text-white"
+          >
+            View Details
+          </Link>
         </div>
       </div>
     </div>
