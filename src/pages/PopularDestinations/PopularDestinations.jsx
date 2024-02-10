@@ -1,37 +1,74 @@
-import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import { FaLocationDot } from "react-icons/fa6";
 
 import p1 from "../../assets/populer1.jpg";
+import p2 from "../../assets/populer2.jpg";
+import p3 from "../../assets/populer3.jpg";
+import p4 from "../../assets/populer4.jpg";
+import p5 from "../../assets/populer5.jpg";
+import p6 from "../../assets/populer6.jpg";
+
 const PopularDestinations = () => {
   return (
-    <div>
+    <div className="my-16">
+      <h2 className="text-4xl md:px-10 pb-8 md:-pb-0 md:text-5xl text-[#3e7172] font-semibold">
+        Popular Destinations
+      </h2>
       <Swiper
-        spaceBetween={30}
+        slidesPerView={5}
         centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        spaceBetween={10}
+        loop={true}
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        modules={[Pagination]}
+        className="mySwiper mb-16"
       >
-        <SwiperSlide>
-          <div className="relative">
-            <img src={p1} alt="" />
-
-            <div className="absolute flex justfy-center items-end  top-0 left-0 w-full h-full pl-[3rem]">
-              <h1 className="text-3xl font-bold text-white mb-8 flex items-center gap-2">
-              <FaLocationDot />
-                London,England
-              </h1>
-            </div>
-          </div>
+        <SwiperSlide className="">
+          <img src={p1} alt="" />
+          <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
+            <FaLocationDot />
+            London
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <img src={p2} alt="" />
+          <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
+            <FaLocationDot />
+            Bankok
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <img src={p3} alt="" />
+          <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
+            <FaLocationDot />
+            Canada
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <img src={p4} alt="" />
+          <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
+            <FaLocationDot />
+            France
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <img src={p5} alt="" />
+          <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
+            <FaLocationDot />
+            Italy
+          </h3>
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <img src={p6} alt="" />
+          <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
+            <FaLocationDot />
+            morokko
+          </h3>
         </SwiperSlide>
       </Swiper>
     </div>
