@@ -6,6 +6,7 @@ import Review from "../Review/Review";
 import Services from "../Services/Services";
 import bgimg from "../../assets/bg.svg";
 import PopularDestinations from "../PopularDestinations/PopularDestinations";
+import Achievement from "../Achievement/Achievement";
 
 const Home = () => {
   const popularService = useLoaderData();
@@ -22,9 +23,9 @@ const Home = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="px-6 md:px-10 md:my-16 my-10"
+        className="px-6 md:px-10 md:my-14 my-10"
       >
-        <h2 className="text-4xl md:px-10 pb-4 md:-pb-0 md:text-5xl text-[#3e7172] font-semibold ">
+        <h2 className="text-4xl md:px-10 text-center pb-6 md:-pb-0 md:text-5xl text-[#3e7172] font-semibold ">
           Popular Services
         </h2>
 
@@ -44,6 +45,7 @@ const Home = () => {
         </div>
       </div>
       <PopularDestinations></PopularDestinations>
+      <Achievement></Achievement>
       {/* <Review></Review> */}
       {/* <MeetTheTeam></MeetTheTeam> */}
       {/* <FollowUs></FollowUs> */}
