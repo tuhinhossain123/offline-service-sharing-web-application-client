@@ -5,6 +5,7 @@ import MeetTheTeam from "../MeetTheTeam/MeetTheTeam";
 import Review from "../Review/Review";
 import Services from "../Services/Services";
 import bgimg from "../../assets/bg.svg";
+import PopularDestinations from "../PopularDestinations/PopularDestinations";
 
 const Home = () => {
   const popularService = useLoaderData();
@@ -42,6 +43,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
+      <PopularDestinations></PopularDestinations>
       {/* <Review></Review> */}
       {/* <MeetTheTeam></MeetTheTeam> */}
       {/* <FollowUs></FollowUs> */}

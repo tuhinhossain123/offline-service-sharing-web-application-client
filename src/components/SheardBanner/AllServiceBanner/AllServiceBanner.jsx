@@ -4,7 +4,7 @@ const AllServiceBanner = () => {
     return (
         <div className="relative w-full h-full">
         <img
-          className="w-full h-[80vh] object-cover"
+          className="w-full h-[70vh] object-cover"
           src={allService}
           alt="Banner"
           width={1200}
