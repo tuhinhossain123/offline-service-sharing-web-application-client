@@ -13,7 +13,7 @@ import p6 from "../../assets/populer6.jpg";
 
 const PopularDestinations = () => {
   return (
-    <div className="my-14">
+    <div className="my-10">
       <h2 className="text-4xl md:text-4xl text-center px-6 md:px-10 pb-8 md:-pb-0 md:text-5xl text-[#3e7172] font-semibold">
         Popular Destinations
       </h2>
@@ -29,42 +29,42 @@ const PopularDestinations = () => {
         className="mySwiper mb-16"
       >
         <SwiperSlide className="">
-          <img src={p1} alt="" />
+          <img src={p1} alt="" className="h-[10rem] md:h-full"/>
           <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot />
             London
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p2} alt="" />
+          <img src={p2} alt="" className="h-[10rem] md:h-full"/>
           <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot />
             Bankok
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p3} alt="" />
+          <img src={p3} alt="" className="h-[10rem] md:h-full"/>
           <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot />
             Canada
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p4} alt="" />
+          <img src={p4} alt="" className="h-[10rem] md:h-full"/>
           <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot />
             France
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p5} alt="" />
+          <img src={p5} alt="" className="h-[10rem] md:h-full"/>
           <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot />
             Italy
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p6} alt="" />
+          <img src={p6} alt="" className="h-[10rem] md:h-full"/>
           <h3 className="text-center -mt-10 text-white font-semibold text-xm md:text-3xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot />
             morokko

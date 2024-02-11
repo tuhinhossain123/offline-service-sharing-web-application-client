@@ -11,8 +11,8 @@ const Services = ({ service }) => {
   } = service;
 
   return (
-    <div className="rounded-t-lg bg-gray-50 shadow-md hover:shadow-2xl hover-shadow-gray-800 text-gray-500">
-      <div className="md:h-[35rem]">
+    <div className="rounded-md bg-gray-50 shadow-md hover:shadow-2xl hover-shadow-gray-800 text-gray-500">
+      <div className="md:h-[20rem] lg:h-[35rem]">
         <img src={service_img} alt="" className=" h-full w-full" />
       </div>
       <div className="px-4 pb-6">
