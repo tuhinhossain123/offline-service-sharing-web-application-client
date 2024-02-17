@@ -1,10 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import Service from "../Service/Service";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const ManageService = () => {
+  const { user } = useContext(AuthContext);
   const manageService = useLoaderData();
   const [servicesDelete, setServicesDelete] = useState(manageService);
   console.log(servicesDelete);
@@ -43,6 +45,11 @@ const ManageService = () => {
           });
       }
     });
+
+    // const services = manageService.find(
+    //   (service) => service.provider_email === user.email
+    // );
+    // console.log(services);
 
     //
   };

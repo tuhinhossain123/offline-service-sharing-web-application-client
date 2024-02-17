@@ -64,6 +64,8 @@ const Navbar = () => {
               <NavLink
                 to={"/allServices"}
                 className=" px-5 py-1 text-[1.5rem] text-black  hover:text-gray-500    duration-500"
+               
+                
               >
                 All Services
               </NavLink>

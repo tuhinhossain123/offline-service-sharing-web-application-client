@@ -46,11 +46,15 @@ const Login = () => {
   };
   return (
     <div className="w-full md:w-[35%] mx-auto ">
-      <div className="hero-content flex-col">
+      
+      <div className="hero-content">
+      
+    
         <div className="">
           <h1 className="text-2xl font-bold">Please Login</h1>
         </div>
         <div className=" w-full shadow-2xl bg-base-100">
+          
           <div className="card-body">
             <form onSubmit={handleLogin}>
               <div className="form-control">
