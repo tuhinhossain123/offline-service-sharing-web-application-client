@@ -5,6 +5,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user)
   const { id } = useParams();
 
   const handleLogOut = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li className="text-xl">
+      <li className="text-xl font-semibold text-slate-700">
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
@@ -31,7 +32,7 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li className="text-xl">
+      <li className="text-xl font-semibold text-slate-700">
         <NavLink
           to="/allServices"
           className={({ isActive, isPending }) =>
@@ -45,7 +46,7 @@ const Navbar = () => {
           All Services
         </NavLink>
       </li>
-      <li className="text-xl">
+      <li className="text-xl font-semibold text-slate-700">
         <NavLink
           to="/contactUs"
           className={({ isActive, isPending }) =>
@@ -61,7 +62,7 @@ const Navbar = () => {
       </li>
       {user && (
         <>
-          <li className="text-xl">
+          <li className="text-xl font-semibold text-slate-700">
             <NavLink
               to="/manageServices"
               className={({ isActive, isPending }) =>
@@ -75,14 +76,17 @@ const Navbar = () => {
               Manage Services
             </NavLink>
           </li>
-          <li className="text-xl">
+          <li className="text-xl font-semibold text-slate-700">
             <NavLink
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? " " : ""
               }
             >
               <div className="dropdown dropdown-bottom">
-                <label tabIndex={0} className="text-xl">
+                <label
+                  tabIndex={0}
+                  className="text-xl font-semibold text-slate-700"
+                >
                   Dashboard
                 </label>
                 <ul
@@ -92,7 +96,7 @@ const Navbar = () => {
                   <li className="text-xl">
                     <a>My-services</a>
                   </li>
-                  <li className="text-lg">
+                  <li className="text-lg font-semibold text-slate-700">
                     <NavLink
                       to="/addServices"
                       className={({ isActive, isPending }) =>
@@ -106,7 +110,7 @@ const Navbar = () => {
                       Add Service
                     </NavLink>
                   </li>
-                  <li className="text-lg">
+                  <li className="text-lg font-semibold text-slate-700">
                     <NavLink
                       to="/mySchedules"
                       className={({ isActive, isPending }) =>
@@ -120,7 +124,7 @@ const Navbar = () => {
                       My Schedules
                     </NavLink>
                   </li>
-                  <li className="text-lg">
+                  <li className="text-lg font-semibold text-slate-700">
                     <NavLink
                       to="/myPendingWork"
                       className={({ isActive, isPending }) =>
@@ -143,7 +147,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="md:px-10 py-2 bg-gary-100">
+    <div className="md:px-20 py-2 bg-gary-100">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown ">
@@ -180,44 +184,34 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        {/* <div className="navbar-end">
-          {user ? (
-              <div>
-               
-                <button
-                  onClick={handleLogOut}
-                  className="px-10 py-4  text-lg font-semibold rounded  bg-[#3e7172] text-white"
-                >
-                  Sign Out
-                </button>
-              </div>
-          ) : (
-            <Link to="/login">
-              <button className="px-10 py-4  text-lg font-semibold rounded  bg-[#3e7172] text-white">
-                Sign In
-              </button>
-            </Link>
-          )}
-        </div> */}
 
         <div className="navbar-end">
           <div className="dropdown dropdown-bottom flex justify-center mr-12 md:mr-4">
             <label tabIndex={0} className="text-black">
-              <FaUserCircle className="text-6xl" />
+              {user ? (
+                <>
+                  {" "}
+                  <div className="avatar">
+                    <div className="w-16 rounded-full">
+                      <img src={user?.photoURL} />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <FaUserCircle className="text-6xl" />
+              )}
             </label>
             <ul
               tabIndex={0}
               className="dropdown-content z-[20] menu px-4 text-center shadow-2xl bg-[#3e7172] text-white rounded w-40"
             >
               {user ? (
-                
-                    <button
-                      onClick={handleLogOut}
-                      className=" pt-2 pb-1 text-lg font-semibold rounded   text-white"
-                    >
-                      Sign Out
-                    </button>
-                 
+                <button
+                  onClick={handleLogOut}
+                  className=" pt-2 pb-1 text-lg font-semibold rounded   text-white"
+                >
+                  Sign Out
+                </button>
               ) : (
                 <>
                   <Link to="/register">

@@ -13,7 +13,7 @@ const AllServiceBanner = () => {
         <div className="absolute flex item-center justfy-start top-0 left-0 w-full h-full bg-black opacity-70">
          <div className="flex justfy-start items-end bg-black h-full w-full pl-[15rem] pb-[6rem]">
          <div>
-            <h2 className="text-white text-7xl font-semibold">All Services</h2>
+            <h2 className="text-white text-7xl font-semibold hidden md:block">All Services</h2>
           </div>
          </div>
         </div>
