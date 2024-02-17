@@ -70,6 +70,16 @@ const Navbar = () => {
                 All Services
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to={"/contactUs"}
+                className=" px-5 py-1 text-[1.5rem] text-black  hover:text-gray-500    duration-500"
+               
+                
+              >
+                Contact Us
+              </NavLink>
+            </li>
 
             {user ? (
               <li>

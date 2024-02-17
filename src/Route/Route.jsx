@@ -12,6 +12,7 @@ import AllServices from "../pages/AllServices/AllServices";
 import Details from "../pages/Details/Details";
 import MySchedules from "../pages/MySchedules/MySchedules";
 import MyPendingWorks from "../pages/MyPendingWorks/MyPendingWorks";
+import ContacUs from "../pages/ContactUs/ContacUs";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
           fetch(
             "https://offline-service-sharing-web-application-crud.vercel.app/services"
           ),
+      },
+      {
+        path: "/contactUs",
+        element: <ContacUs></ContacUs>,
       },
       {
         path: "/details/:id",
