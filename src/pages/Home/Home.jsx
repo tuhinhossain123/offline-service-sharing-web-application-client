@@ -21,9 +21,9 @@ const Home = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="px-6 md:px-8 md:my-14 my-10"
+        className="px-6 md:px-8 md:my-14 my-16"
       >
-        <h2 className="text-4xl md:px-10 text-center pb-6 md:-pb-0 md:text-5xl text-[#3e7172] font-semibold ">
+        <h2 className="text-4xl md:px-10 text-center pb-10 md:-pb-0 md:text-5xl text-[#3e7172] font-semibold ">
           Popular Destinations
         </h2>
 
