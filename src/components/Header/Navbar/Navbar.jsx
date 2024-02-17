@@ -22,7 +22,7 @@ const Navbar = () => {
     toast("sing up successfully");
   };
   return (
-    <div className="bg-white top-0">
+    <div className="bg-gray-50 top-0">
       <nav className="flex flex-col md:flex-row md:items-center justify-between px-10 py-3">
         <div className="nav-left flex items-center justify-between w-full md:w-fit">
           <div className="w-[6rem] md-[8rem]">

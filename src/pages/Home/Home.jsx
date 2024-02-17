@@ -1,13 +1,10 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../../components/Header/Banner/Banner";
-import FollowUs from "../FollowUs/FollowUs";
-import MeetTheTeam from "../MeetTheTeam/MeetTheTeam";
 import Review from "../Review/Review";
 import Services from "../Services/Services";
 import bgimg from "../../assets/bg.svg";
 import PopularDestinations from "../PopularDestinations/PopularDestinations";
 import Achievement from "../Achievement/Achievement";
-import testiBg from "../../assets/Testimonial-bg.svg";
 
 const Home = () => {
   const popularService = useLoaderData();
@@ -47,19 +44,8 @@ const Home = () => {
       </div>
       <PopularDestinations></PopularDestinations>
       <Achievement></Achievement>
-      <Review>
-        <div>
-          style=
-          {{
-            backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${testiBg})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        </div>
-      </Review>
-      {/* <MeetTheTeam></MeetTheTeam> */}
-      {/* <FollowUs></FollowUs> */}
+
+      <Review></Review>
     </>
   );
 };

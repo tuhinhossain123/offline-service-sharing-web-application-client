@@ -1,4 +1,3 @@
-
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,10 +5,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
+import lotiImg from "../../assets/lotti.jpg";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
@@ -55,76 +56,82 @@ const Register = () => {
       });
   };
   return (
-    <div className=" w-full md:w-[35%] mx-auto ">
-      <div className="hero-content flex-col">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold">Please Register</h1>
+    <div className="mt-16 mb-10">
+      <div className="hero-content flex-col md:flex-row  lg:gap-20 w-full mx-auto gap-10">
+        <div className="lg:w-[50%] hidden md:block">
+          <img src={lotiImg} alt="" className="w-full h-full" />
         </div>
-        <div className=" w-full  shadow-2xl bg-base-100">
+        <div className=" lg:w-[40%] w-full mx-auto shadow-2xl rounded-lg bg-[#3e7172]">
+          <h1 className="text-4xl font-semibold text-white pl-10 pt-10">
+            Sign Up
+          </h1>
           <div className="card-body">
             <form onSubmit={handleRegister}>
-              <div className="form-control">
+              <div className="form-control  ">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text text-white text-lg">Name</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter Your Name"
+                  placeholder="Your Name"
                   name="name"
-                  className="input input-bordered"
+                  className="input text-black bg-white input-bordered"
                   required
                 />
               </div>
-              <div className="form-control">
+              <div className="form-control  ">
                 <label className="label">
-                  <span className="label-text">img url</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="img url"
-                  name="text"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-white text-lg">Email</span>
                 </label>
                 <input
                   type="email"
-                  placeholder="Enter Your Email"
+                  placeholder="Your Email"
                   name="email"
-                  className="input input-bordered"
+                  className="input text-black bg-white input-bordered"
                   required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-white text-lg">Img URL</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Img URL"
+                  name="text"
+                  className="input text-black bg-white input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-white text-lg">
+                    Password
+                  </span>
                 </label>
                 <input
                   type="password"
-                  placeholder="Enter you password"
+                  placeholder="password"
                   name="password"
-                  className="input input-bordered"
+                  className="input text-black bg-white input-bordered"
                   required
                 />
-                <p className="text-red-500">{error}</p>
+                {error && <p className="text-red-500">{error}</p>}
+                {success && <p className="text-green-500">{success}</p>}
               </div>
-              <div className="form-control mt-4">
-                <button className="p-3 font-bold rounded text-lg bg-[#02a388] text-white">
-                  Register
+              <div className="form-control mt-6">
+                <button className="py-2 px-2 font-semibold rounded-md text-lg bg-white text-black">
+                  Sign Up
                 </button>
-                <ToastContainer />
               </div>
             </form>
-            <p className=" font-bold">
-              Already have an account please ?{" "}
-              <Link
-                to="/login"
-                className="text-blue-500 font-semibold underline"
-              >
-                login
+
+            <p className="font-semibold  pt-1">
+              <span className="text-white">
+                {" "}
+                Already have an account please ?{" "}
+              </span>
+              <Link to="/login" className="text-gray-100 underline pl-2">
+                Sign In
               </Link>
             </p>
           </div>

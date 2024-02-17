@@ -13,7 +13,7 @@ const Show = ({ show, searchItem, setSearchItem }) => {
   return (
     <div className="rounded-t-lg bg-gray-50 shadow-md hover:drop-shadow-2xl hover-shadow-[#3e7172] text-gray-500">
       <div className="">
-        <img src={service_img} alt="" className="rounded-l-lg  h-full" />
+        <img src={service_img} alt="" className="rounded  h-full" />
       </div>
       <div className="p-5 space-y-3 rounded-r-lg">
         <h2 className="text-3xl font-semibold text-black">{service_name}</h2>
