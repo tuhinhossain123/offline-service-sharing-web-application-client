@@ -2,11 +2,13 @@ import ContactBanner from "../../components/SheardBanner/ContactBanner/ContactBa
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { FaPhone } from "react-icons/fa6";
+import MeetTeam from "../MeetTeam/MeetTeam";
 
 const ContacUs = () => {
   return (
     <div className="border-2">
       <ContactBanner></ContactBanner>
+      <MeetTeam></MeetTeam>
       <div className="w-full md:w-[70%] p-4 lg:p-8 mx-auto">
         <div className="flex flex-col lg:flex-row justify-between  w-full border-2 border-[#3e7172] rounded-lg ">
           <div className="pt-6 lg:py-14 pl-8 flex flex-col justify-center space-y-6 lg:w-[40%]">
@@ -36,7 +38,7 @@ const ContacUs = () => {
               Get In Touch
             </h2>
             <form>
-              <div className="flex flex-col items-center lg:gap-10">
+              <div className="flex flex-col lg:flex-row items-center lg:gap-10">
                 <div className="form-control w-full">
                   <input
                     type="name"
@@ -83,7 +85,7 @@ const ContacUs = () => {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233668.06396725783!2d90.25487754014735!3d23.780753031632905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2str!4v1708187412497!5m2!1sen!2str"
           width="100%"
-          height="700"
+          height="500"
           loading="lazy"
           // className="w-full md:h-[80vh]"
         ></iframe>
