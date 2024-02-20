@@ -4,7 +4,7 @@ const ContactBanner = () => {
   return (
     <div className="relative w-full h-full">
       <img
-        className="w-full h-[60vh] object-cover"
+        className="w-full h-[50vh] object-cover"
         src={allService}
         alt="Banner"
         width={1200}
