@@ -11,19 +11,16 @@ const AllServices = () => {
     item.service_name?.toLowerCase().includes(searchItem.toLowerCase())
   );
 
-
   return (
     <div>
       <AllServiceBanner></AllServiceBanner>
-      <div className="my-16 mb-10 flex justify-center ">
+      <div className="w-[70%] mx-auto rounded-xl caret-black mb-4 mt-10 px-10">
         <input
-          type="search"
-          name=""
-          id=""
-          value={searchItem}
-          onChange={(e) => setSearchItem(e.target.value)}
+          type="name"
           placeholder="Search Service"
-          className="input bg-gray-100 focus:bg-green-100 border-[#3e7172] focus:border-none  rounded-md py-1 px-2 w-[30%]"
+          name="from_name"
+          required
+          className="input bg-[#3e7172] text-white text-lg w-full p-2"
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 my-16">

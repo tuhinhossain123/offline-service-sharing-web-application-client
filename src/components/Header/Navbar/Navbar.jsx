@@ -96,7 +96,7 @@ const Navbar = () => {
                   <li className="text-xl">
                     <a>My-services</a>
                   </li>
-                  <li className="text-lg font-semibold text-slate-700">
+                  <li className="text-lg font-semibold ">
                     <NavLink
                       to="/addServices"
                       className={({ isActive, isPending }) =>
@@ -110,7 +110,7 @@ const Navbar = () => {
                       Add Service
                     </NavLink>
                   </li>
-                  <li className="text-lg font-semibold text-slate-700">
+                  <li className="text-lg font-semibold">
                     <NavLink
                       to="/mySchedules"
                       className={({ isActive, isPending }) =>
@@ -124,7 +124,7 @@ const Navbar = () => {
                       My Schedules
                     </NavLink>
                   </li>
-                  <li className="text-lg font-semibold text-slate-700">
+                  <li className="text-lg font-semibold">
                     <NavLink
                       to="/myPendingWork"
                       className={({ isActive, isPending }) =>

@@ -66,13 +66,13 @@ const ContacUs = () => {
                 <FaLocationDot className="text-5xl text-[#3e7172]" />
               </div>
               <div className="">
-                <h2 className="text-5xl text-gray-500 font-semibold pb-3">
+                <h2 className="text-5xl font-semibold pb-3 text-[#3e7172]">
                   Address
                 </h2>
-                <h2 className="text-xl text-gray-400 font-semibold pb-1">
+                <h2 className="text-xl text-[#3e7172] font-semibold pb-1">
                   123 Ave,Boshundhura
                 </h2>
-                <h2 className="text-xl text-gray-400 font-semibold pb-1">
+                <h2 className="text-xl text-[#3e7172] font-semibold pb-1">
                   Dhaka,Bangladesh
                 </h2>
               </div>

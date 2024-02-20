@@ -50,65 +50,43 @@ const Details = () => {
   };
 
   return (
-    <div className="flex items-start justify-between gap-5 w-[60%] mx-auto my-16">
+    <div className=" my-16">
       <ToastContainer />
-      <div className="flex justify-center text-center items-center w-[30%]">
-        <div className="">
-          <img
-            src={details.service_provider_img}
-            alt=""
-            className="rounded-full mx-auto"
-          />
-          <div className="space-y-3 py-2">
-            <h2 className="text-xl font-semibold ">
-              Name: {details.service_provider_name}
-            </h2>
-            <h4 className="text-lg font-medium">
-              Location: {details.service_area}
-            </h4>
-          </div>
-        </div>
-      </div>
 
-      {/* single service section */}
-      <div className="rounded-b-lg bg-base-100 shadow-xl w-[70%] mx-auto">
-        <div>
+      <div className="">
+        <div className="w-[80rem] h-[40rem] mx-auto">
           <img
             src={details.service_img}
             alt=""
-            className="rounded-t-lg w-full"
+            className="rounded-xl w-full h-full"
           />
         </div>
-        <div className="space-y-3 px-5 py-4">
-          <div className="flex items-center gap-5">
-            <img
-              src={details.service_provider_img}
-              alt=""
-              className="rounded-full w-10"
-            />
-            <h2 className="font-semibold">{details.service_provider_name}</h2>
-          </div>
-          <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-semibold text-[#02a388]">
-              {details.service_name}
-            </h2>
+        <div className="space-y-3 px-5 w-[70%] mx-auto py-8">
+          <h2 className="text-5xl text-gray-800 font-semibold">
+            {details.service_name}
+          </h2>
 
-            <p className="">
-              {" "}
-              <span className="text-xl text-red-500 font-bold">
-                Price:
-              </span>{" "}
-              {details.service_price}
-            </p>
-          </div>
-          <div>
-            {/* modal start here */}
+          <h2 className="text-xl pt-2 text-gray-500 font-semibold">
+            {details.service_des}
+          </h2>
+          <div className="flex justify-between items-center">
+            <h2>
+              <span className="text-lg ">Price: </span>
+              <span className="text-2xl font-bold pr-2">
+                ${details.service_price}
+              </span>
+            </h2>
             <button
-              className="bg-[#02a388] btn-block py-2 px-3 text-white rounded my-2 font-bold"
+              className="btn bg-[#3e7172] hover:bg-[#3e7172]  px-8 font-bold text-white rounded "
               onClick={() => document.getElementById("my_modal_5").showModal()}
             >
               Book Now
             </button>
+          </div>
+          <div className="divider divider-neutral pt-20"></div>
+          <div>
+            {/* modal start here */}
+
             <dialog
               id="my_modal_5"
               className="modal modal-bottom sm:modal-middle"
