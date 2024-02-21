@@ -19,7 +19,7 @@ const ContacUs = () => {
       <div className="mt-10 px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
           <div className="w-full lg:w-[60%]">
-            <h2 className="text-5xl font-semibold pb-6 md:pb-8 text-[#3e7172]">
+            <h2 className="text-5xl font-semibold pb-6 md:pb-8 text-[#5f988f]">
               Get In Touch
             </h2>
             <form className="">
@@ -66,7 +66,7 @@ const ContacUs = () => {
                 <FaLocationDot className="text-5xl text-[#3e7172]" />
               </div>
               <div className="">
-                <h2 className="text-5xl font-semibold pb-3 text-[#3e7172]">
+                <h2 className="text-5xl font-semibold pb-3 text-[#5f988f]">
                   Address
                 </h2>
                 <h2 className="text-xl text-[#3e7172] font-semibold pb-1">
@@ -82,7 +82,7 @@ const ContacUs = () => {
                 <MdOutlineEmail className="text-5xl text-[#3e7172]" />
               </div>
               <div className="">
-                <h2 className="text-5xl text-gray-500 font-semibold pb-3">
+                <h2 className="text-5xl font-semibold pb-3 text-[#5f988f]">
                   Email
                 </h2>
                 <h2 className="text-xl text-gray-400 font-semibold pb-1">
@@ -98,7 +98,7 @@ const ContacUs = () => {
                 <FaPhone className="text-5xl text-[#3e7172]" />
               </div>
               <div className="">
-                <h2 className="text-5xl text-gray-500 font-semibold pb-3">
+                <h2 className="text-5xl font-semibold pb-3 text-[#5f988f]">
                   Phone
                 </h2>
                 <h2 className="text-xl text-gray-400 font-semibold pb-1">

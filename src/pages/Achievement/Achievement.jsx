@@ -5,7 +5,7 @@ import img from "../../assets/banner3.png"
 const Achievement = () => {
   return (
     <div className="my-10">
-      <h2 className="text-4xl px-6 md:px-10 pb-6 text-center md:-pb-0 md:text-5xl text-[#3e7172] font-semibold">
+      <h2 className="text-4xl px-6 md:px-10 pb-6 text-center md:-pb-0 md:text-5xl text-[#5f988f] font-semibold">
         Achievement
       </h2>
       <div className="md:h-[90vh] lg:h-[50vh] py-4  flex items-center"  style={{
@@ -18,7 +18,7 @@ const Achievement = () => {
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
             <div className="card bg-gray-100 shadow-md hover:shadow-2xl hover-shadow-black hover:transform hover:scale-110 duration-500 rounded">
               <div className="card-body items-center my-10 text-center">
-                <h2 className="card-title text-4xl mb-4 text-5xl font-bold text-[#3e7172]">
+                <h2 className="card-title text-4xl mb-4 text-5xl font-bold text-[#5f988f]">
                   <CountUp
                     start={0}
                     end={550}
@@ -37,14 +37,14 @@ const Achievement = () => {
                     )}
                   </CountUp>
                 </h2>
-                <p className="uppercase text-3xl font-semibold text-[#3e7172]">
+                <p className="uppercase text-3xl font-semibold text-[#5f988f]">
                   Destination
                 </p>
               </div>
             </div>
             <div className="card bg-gray-100 shadow-md hover:shadow-2xl hover-shadow-black hover:transform hover:scale-110 duration-500 rounded">
               <div className="card-body items-center my-10 text-center">
-                <h2 className="card-title text-5xl mb-4  font-bold text-[#3e7172]">
+                <h2 className="card-title text-5xl mb-4  font-bold text-[#5f988f]">
                   <CountUp
                     start={0}
                     end={428}
@@ -63,14 +63,14 @@ const Achievement = () => {
                     )}
                   </CountUp>
                 </h2>
-                <p className="uppercase  text-3xl font-semibold text-[#3e7172]">
+                <p className="uppercase  text-3xl font-semibold text-[#5f988f]">
                   Tour
                 </p>
               </div>
             </div>
             <div className="card bg-gray-100 shadow-md hover:shadow-2xl hover-shadow-black hover:transform hover:scale-110 duration-500 rounded">
               <div className="card-body items-center my-10 text-center">
-                <h2 className="card-title text-5xl mb-4 font-bold text-[#3e7172]">
+                <h2 className="card-title text-5xl mb-4 font-bold text-[#5f988f]">
                   <CountUp
                     start={0}
                     end={4603}
@@ -89,14 +89,14 @@ const Achievement = () => {
                     )}
                   </CountUp>
                 </h2>
-                <p className="uppercase text-3xl font-semibold text-[#3e7172]">
+                <p className="uppercase text-3xl font-semibold text-[#5f988f]">
                   Tourists
                 </p>
               </div>
             </div>
             <div className="card bg-gray-100 shadow-md hover:shadow-2xl hover-shadow-black hover:transform hover:scale-110 duration-500 rounded">
               <div className="card-body items-center my-10 text-center">
-                <h2 className="card-title text-5xl mb-4  font-bold text-[#3e7172]">
+                <h2 className="card-title text-5xl mb-4  font-bold text-[#5f988f]">
                   <CountUp
                     start={0}
                     end={70}
@@ -115,7 +115,7 @@ const Achievement = () => {
                     )}
                   </CountUp>
                 </h2>
-                <p className="uppercase text-3xl font-semibold text-[#3e7172]">
+                <p className="uppercase text-3xl font-semibold text-[#5f988f]">
                   Country
                 </p>
               </div>

@@ -6,7 +6,7 @@ import { IoStar } from "react-icons/io5";
 const Review = () => {
   return (
     <div className="my-24">
-      <h2 className="text-4xl md:px-10 text-center pb-6 md:-pb-0 md:text-5xl text-[#3e7172] font-semibold ">
+      <h2 className="text-4xl md:px-10 text-center pb-6 md:-pb-0 md:text-5xl text-[#5f988f] font-semibold ">
         Testimonial
       </h2>
 

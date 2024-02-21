@@ -7,6 +7,7 @@ import banner1 from "../../../assets/banner1.png";
 import banner2 from "../../../assets/banner2.png";
 import banner3 from "../../../assets/banner3.png";
 import banner4 from "../../../assets/banner4.png";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -35,12 +36,12 @@ const Banner = () => {
               </h2>
 
               <div className="pt-4">
-                <button className="btn  bg-[#3e7172] border-none text-white  mr-3">
+                <Link to="/allServices" className="btn  bg-[#3e7172] hover:bg-[#3e7172] border-none text-white  mr-3">
                   Book Now
-                </button>
-                <button className="btn btn-outline text-white">
+                </Link>
+                <Link to="/contactUs" className="btn btn-outline hover:bg-black text-white">
                   +888 0156356376
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -57,12 +58,12 @@ const Banner = () => {
               </h2>
 
               <div className="pt-4">
-                <button className="btn  bg-[#3e7172] border-none text-white  mr-3">
+                <Link to="/allServices" className="btn  bg-[#3e7172] hover:bg-[#3e7172] border-none text-white  mr-3">
                   Book Now
-                </button>
-                <button className="btn btn-outline text-white">
+                </Link>
+                <Link to="/contactUs" className="btn btn-outline hover:bg-black text-white">
                   +888 0156356376
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -79,12 +80,12 @@ const Banner = () => {
               </h2>
 
               <div className="pt-4">
-                <button className="btn  bg-[#3e7172] border-none text-white  mr-3">
+                <Link to="/allServices" className="btn  bg-[#3e7172] hover:bg-[#3e7172] border-none text-white  mr-3">
                   Book Now
-                </button>
-                <button className="btn btn-outline text-white">
+                </Link>
+                <Link to="/contactUs" className="btn btn-outline hover:bg-black text-white">
                   +888 0156356376
-                </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -25,7 +25,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#3e7172]  underline font-medium"
+              ? "text-[#5f988f] font-medium"
               : ""
           }
         >
@@ -39,7 +39,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#3e7172]  underline font-medium"
+              ? "text-[#5f988f]  font-medium"
               : ""
           }
         >
@@ -53,7 +53,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#3e7172]  underline font-medium"
+              ? "text-[#5f988f] font-medium"
               : ""
           }
         >
@@ -69,7 +69,7 @@ const Navbar = () => {
                 isPending
                   ? "pending"
                   : isActive
-                  ? "text-[#3e7172]  underline font-medium"
+                  ? "text-[#5f988f]  font-medium"
                   : ""
               }
             >
@@ -103,7 +103,7 @@ const Navbar = () => {
                         isPending
                           ? "pending"
                           : isActive
-                          ? "text-slate-600 underline font-medium"
+                          ? "text-slate-600 font-medium"
                           : ""
                       }
                     >
@@ -117,7 +117,7 @@ const Navbar = () => {
                         isPending
                           ? "pending"
                           : isActive
-                          ? "text-slate-600 underline font-medium"
+                          ? "text-slate-600 font-medium"
                           : ""
                       }
                     >
@@ -131,7 +131,7 @@ const Navbar = () => {
                         isPending
                           ? "pending"
                           : isActive
-                          ? "text-slate-600 underline font-medium"
+                          ? "text-slate-600 font-medium"
                           : ""
                       }
                     >
@@ -147,7 +147,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="md:px-20 py-2 bg-gary-100">
+    <div className="md:px-20 py-2 bg-gray-50">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown ">

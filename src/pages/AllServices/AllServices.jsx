@@ -37,7 +37,7 @@ const AllServices = () => {
       <div className="flex justify-center mt-6 mb-16">
         <button
           onClick={() => setSeeAll(showAll.length)}
-          className="py-4 px-8 text-xl font-bold text-[#3e7172] border-2 border-[#3e7172] text-center"
+          className="py-4 px-8 text-xl font-bold text-[#5f988f] border-2 border-[#5f988f] text-center"
           
         >
           Show More

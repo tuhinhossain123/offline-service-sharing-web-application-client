@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const MeetTeam = () => {
   return (
     <div className="my-16">
-      <h2 className="text-4xl md:px-10 text-center pb-10 md:-pb-0 md:text-5xl text-[#3e7172] font-semibold">
+      <h2 className="text-4xl md:px-10 text-center pb-10 md:-pb-0 md:text-5xl text-[#5f988f] font-semibold">
         Meet Our Team
       </h2>
 
