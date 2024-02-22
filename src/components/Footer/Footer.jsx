@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-[#3e7172] px-8 md:px-16 pt-4  text-white">
+    <div className="bg-gray-100 px-8 md:px-16 pt-4  text-white">
       <div>
         <div className="w-[8rem] md:w-[10rem]">
           <img
@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="pt-2 w-full md:w-2/4">
-          <p className="text-xl tracking-wider">
+          <p className="text-xl text-gray-700 font-semibold tracking-wider">
             While the lovely valley teems with vapour  around me, and the
             meridian sun strikes the upper surface of the impenetrable
             foliage of my trees.
@@ -31,30 +31,30 @@ const Footer = () => {
             name=""
             id=""
             placeholder="Enter Your Email"
-            className="bg-gray-100 text-black border-0 px-3 py-4 w-full md:w-1/2 rounded-l-lg "
+            className=" bg-base-100 border-0 px-3 py-4 w-full md:w-1/2 rounded-l-lg placeholder:text-black focus:outline-none"
           />
-          <button className="px-3 py-4 font-bold rounded-none rounded-r-lg border border-white text-gray-300">
+          <button className="px-3 py-4 font-bold rounded-none rounded-r-lg border border-white text-white bg-[#3e7172]">
             Subscribe
           </button>
         </div>
       </div>
-      <hr className="mt-4 h-2 hidden md:block" />
+      <div className="divider"></div> 
       <div className="flex flex-col-reverse md:flex-row justify-between pb-2 pt-4 md:gap-2">
-        <p className="text-sm md:text-xl text-center">
-          © 2024 - All right reserved by ACME Industries Ltd
+        <p className="text-sm md:text-xl font-semibold text-gray-700 text-center">
+          © 2024 - All right reserved by Tour & Guid
         </p>
         <div className="grid grid-flow-col gap-10 md:gap-16 pb-8">
           <Link>
-            <FaFacebookF className="text-3xl" />
+            <FaFacebookF className="text-3xl text-[#5f988f]" />
           </Link>
           <Link>
-            <FaLinkedinIn className="text-3xl" />
+            <FaLinkedinIn className="text-3xl text-[#5f988f]" />
           </Link>
           <Link>
-            <FaTelegramPlane className="text-3xl" />
+            <FaTelegramPlane className="text-3xl text-[#5f988f]" />
           </Link>
           <Link>
-            <FaInstagram className="text-3xl" />
+            <FaInstagram className="text-3xl text-[#5f988f]" />
           </Link>
         </div>
       </div>

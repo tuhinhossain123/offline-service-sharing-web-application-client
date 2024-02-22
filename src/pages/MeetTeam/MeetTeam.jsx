@@ -13,10 +13,10 @@ const MeetTeam = () => {
         Meet Our Team
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 lg:px-16">
-        <div className="group shadow-xl  relative  gap-4  ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 lg:px-16 lg:w-[75%] mx-auto">
+        <div className="group shadow-xl  relative  gap-4 ">
           <div className="">
-            <img src={img1} alt="" className="rounded-xl" />
+            <img src={img1} alt="" className="rounded-xl w-full h-full" />
           </div>
           <div className="absolute bottom-0 left-0 hidden bg-opacity-50 group-hover:flex items-start justify-end flex-col bg-gray-900 w-full h-full pb-8 pl-8">
             <h2 className="text-3xl font-semibold text-white pb-1">
@@ -43,9 +43,9 @@ const MeetTeam = () => {
             </div>
           </div>
         </div>
-        <div className="group  shadow-xl  relative  gap-4 ">
+        <div className="group  shadow-xl  relative  gap-4">
           <div className="">
-            <img src={img2} alt="" className="rounded-xl" />
+            <img src={img2} alt="" className="rounded-xl w-full h-full" />
           </div>
           <div className=" absolute bottom-0 left-0 hidden bg-opacity-50 group-hover:flex items-start justify-end flex-col bg-black w-full h-full pb-8 pl-8">
             <h2 className="text-3xl font-semibold text-white pb-1">
@@ -70,9 +70,9 @@ const MeetTeam = () => {
             </div>
           </div>
         </div>
-        <div className="group shadow-xl relative  gap-4 ">
+        <div className="group shadow-xl relative  gap-4">
           <div className="">
-            <img src={img3} alt="" className="rounded-xl " />
+            <img src={img3} alt="" className="rounded-xl w-full h-full" />
           </div>
           <div className=" absolute bottom-0 left-0 hidden bg-opacity-50 group-hover:flex items-start justify-end flex-col bg-black w-full h-full pb-8 pl-8">
             <h2 className="text-3xl font-semibold text-white pb-1">

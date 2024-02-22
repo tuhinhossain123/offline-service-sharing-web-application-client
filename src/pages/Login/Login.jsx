@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 import { AuthContext } from "../Provider/AuthProvider";
-import lotiImg from "../../assets/lotti.jpg"
+import loginImg from "../../assets/login.png"
 
 const Login = () => {
   const { singIn, singInWithGoogle } = useContext(AuthContext);
@@ -41,10 +41,10 @@ const Login = () => {
   return (
     <div className="mt-16 mb-10">
       <div className="hero-content flex-col  md:flex-row-reverse lg:gap-20 w-full mx-auto gap-10">
-        <div className="lg:w-[50%] hidden md:block">
-          <img src={lotiImg} alt="" className="w-full h-full"/>
+        <div className="lg:w-[70%] hidden md:block">
+          <img src={loginImg} alt="" className="w-full h-full"/>
         </div>
-        <div className=" lg:w-[40%] w-full mx-auto shadow-2xl rounded-lg bg-[#3e7172]">
+        <div className=" lg:w-[60%] w-full mx-auto shadow-2xl rounded-lg bg-[#3e7172]">
           <h1 className="text-4xl font-semibold text-white pl-10 pt-10">
             Sign in
           </h1>
@@ -53,7 +53,7 @@ const Login = () => {
               <div className="">
                 <button
                   onClick={handleWithGoogle}
-                  className="border-2 text-black bg-white rounded-full  font-semibold py-2 px-2 w-full flex items-center justify-center"
+                  className="border-2 text-black bg-white rounded-full  font-semibold py-4 px-2 w-full flex items-center justify-center"
                 >
                   <FcGoogle className="text-xl mr-3"></FcGoogle>Sign in with
                   Google
@@ -68,7 +68,7 @@ const Login = () => {
                   type="email"
                   placeholder="email"
                   name="email"
-                  className="input text-black bg-white input-bordered"
+                  className="input text-black bg-white input-bordered focus:outline-none"
                   required
                 />
                  {error && <p className="text-red-500">{error}</p>}
@@ -84,7 +84,7 @@ const Login = () => {
                   type="password"
                   placeholder="password"
                   name="password"
-                  className="input text-black bg-white input-bordered"
+                  className="input text-black bg-white input-bordered focus:outline-none"
                   required
                 />
                 {error && <p className="text-red-500">{error}</p>}
@@ -99,7 +99,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-3">
-                <button className="py-2 px-2 font-semibold rounded-md text-lg bg-white text-black">
+                <button className="py-2 px-2 font-semibold rounded-md text-lg bg-white text-black focus:outline-none">
                   Sign in
                 </button>
               </div>

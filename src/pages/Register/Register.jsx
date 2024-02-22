@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
-import lotiImg from "../../assets/lotti.jpg";
+import loginImg from "../../assets/login.png"
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -58,10 +58,10 @@ const Register = () => {
   return (
     <div className="mt-16 mb-10">
       <div className="hero-content flex-col md:flex-row  lg:gap-20 w-full mx-auto gap-10">
-        <div className="lg:w-[50%] hidden md:block">
-          <img src={lotiImg} alt="" className="w-full h-full" />
+        <div className="lg:w-[70%] hidden md:block">
+          <img src={loginImg} alt="" className="w-full h-full" />
         </div>
-        <div className=" lg:w-[40%] w-full mx-auto shadow-2xl rounded-lg bg-[#3e7172]">
+        <div className=" lg:w-[60%] w-full mx-auto shadow-2xl rounded-lg bg-[#3e7172]">
           <h1 className="text-4xl font-semibold text-white pl-10 pt-10">
             Sign Up
           </h1>
@@ -75,7 +75,7 @@ const Register = () => {
                   type="text"
                   placeholder="Your Name"
                   name="name"
-                  className="input text-black bg-white input-bordered"
+                  className="input text-black bg-white input-bordered focus:outline-none"
                   required
                 />
               </div>
@@ -87,7 +87,7 @@ const Register = () => {
                   type="email"
                   placeholder="Your Email"
                   name="email"
-                  className="input text-black bg-white input-bordered"
+                  className="input text-black bg-white input-bordered focus:outline-none"
                   required
                 />
               </div>
@@ -99,7 +99,7 @@ const Register = () => {
                   type="text"
                   placeholder="Img URL"
                   name="text"
-                  className="input text-black bg-white input-bordered"
+                  className="input text-black bg-white input-bordered focus:outline-none"
                 />
               </div>
               <div className="form-control">
@@ -112,7 +112,7 @@ const Register = () => {
                   type="password"
                   placeholder="password"
                   name="password"
-                  className="input text-black bg-white input-bordered"
+                  className="input text-black bg-white input-bordered focus:outline-none"
                   required
                 />
                 {error && <p className="text-red-500">{error}</p>}

@@ -21,7 +21,7 @@ const AllServices = () => {
           placeholder="Search Service"
           name="from_name"
           required
-          className="input bg-[#3e7172] text-white text-lg w-full p-2"
+          className="input bg-gray-100 text-white text-lg w-full p-2 focus:outline-none placeholder:text-black"
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 mt-16">

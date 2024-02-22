@@ -29,7 +29,7 @@ const ContacUs = () => {
                   placeholder="Your Name*"
                   name="from_name"
                   required
-                  className="input bg-gray-100 text-lg w-full"
+                  className="input bg-gray-100 text-lg w-full focus:outline-none"
                 />
               </div>
               <div className="form-control w-full border-2 rounded-xl caret-black mb-4">
@@ -38,7 +38,7 @@ const ContacUs = () => {
                   placeholder="Your Email*"
                   name="from_name"
                   required
-                  className="input bg-gray-100 text-lg border-0"
+                  className="input bg-gray-100 text-lg focus:outline-none"
                 />
               </div>
 
@@ -49,7 +49,7 @@ const ContacUs = () => {
                   cols="10"
                   rows="10"
                   placeholder="Message*"
-                  className="bg-gray-100 text-lg p-3 foucs:border-none"
+                  className="bg-gray-100 text-lg p-3 focus:outline-none"
                 ></textarea>
               </div>
 
