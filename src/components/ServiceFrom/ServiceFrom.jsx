@@ -7,11 +7,11 @@ const ServiceFrom = ({ handleSubmit }) => {
   const { user } = useContext(AuthContext);
   return (
     <div className=" my-16 px-5">
-      <div className="bg-[#3e7172] w-full lg:w-[50%] mx-auto p-8 rounded-lg shadow-2xl ">
+      <div className="bg-[#3e7172] w-full lg:w-[50%] mx-auto p-4 lg:p-8 rounded-lg shadow-2xl ">
         <h2 className="text-5xl text-white font-semibold text-center pb-5">Add Service</h2>
         <form
           onSubmit={handleSubmit}
-          className=" "
+          
         >
           <div className="md:flex justify-center gap-10 mb-2">
             <div className="form-control w-full">
@@ -23,7 +23,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                   type="text"
                   name="service_provider_name"
                   placeholder="Your name"
-                  className="input input-bordered w-full bg-white text-lg"
+                  className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black  rounded"
                   defaultValue={user.displayName}
                 />
               </label>
@@ -37,7 +37,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                   type="email"
                   name="email"
                   placeholder="Your Email"
-                  className="input input-bordered w-full bg-gray-100 text-lg"
+                  className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black  rounded"
                   defaultValue={user.email}
                 />
               </label>
@@ -53,7 +53,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                   type="text"
                   name="service_img"
                   placeholder="URL"
-                  className="input input-bordered w-full bg-gray-100 text-lg"
+                  className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black  rounded"
                 />
               </label>
             </div>
@@ -66,7 +66,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                   type="text"
                   name="service_name"
                   placeholder="Service Name,"
-                  className="input input-bordered w-full bg-gray-100 text-lg"
+                  className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black  rounded"
                 />
               </label>
             </div>
@@ -81,7 +81,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                   type="text"
                   name="service_price"
                   placeholder="Price"
-                  className="input input-bordered w-full bg-gray-100 text-lg"
+                  className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black rounded"
                 />
               </label>
             </div>
@@ -94,7 +94,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                   type="text"
                   name="service_area"
                   placeholder="Service Area"
-                  className="input input-bordered w-full bg-gray-100 text-lg"
+                  className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black  rounded"
                 />
               </label>
             </div>
@@ -108,7 +108,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                 type="text"
                 name="service_provider_img"
                 placeholder="Service Img"
-                className="input input-bordered w-full bg-gray-100 text-lg"
+                className="input bg-gray-100 text-lg w-full focus:outline-none placeholderact-black rounded-l-lg"
                 defaultValue={user.photoURL}
               />
             </label>
@@ -118,11 +118,12 @@ const ServiceFrom = ({ handleSubmit }) => {
               <span className="label-text text-white text-lg">Description :</span>
             </label>
             <textarea
-              className="border p-5 rounded bg-gray-100 text-lg"
+              className=" bg-gray-100 p-3 text-lg w-full focus:outline-none placeholder:text-black"
+              placeholder="Description"
               name="service_des"
               id=""
               cols="10"
-              rows="3"
+              rows="5"
             ></textarea>
           </div>
           <div className="flex justify-center">
