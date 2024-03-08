@@ -1,15 +1,29 @@
-import { useLoaderData } from "react-router-dom";
-import Service from "../Service/Service";
-import { useContext, useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
+// import Service from "../Service/Service";
+import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { AuthContext } from "../Provider/AuthProvider";
 
-const ManageService = () => {
+const ServicesService = () => {
   const { user } = useContext(AuthContext);
-  const manageService = useLoaderData();
-  const [servicesDelete, setServicesDelete] = useState(manageService);
-  console.log(servicesDelete);
+  const [services, setServices] = useState([]);
+  const [servicesDelete, setServicesDelete] = useState(services);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/manage/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setServices(data);
+      });
+  },[user]);
+
+  if(services.length==0){
+    return ( 
+      <div className="my-10"><p className="text-3xl font-semibold text-center">Please Add Service</p></div>
+    )
+  }
+  
 
   const handleDelete = (_id) => {
     Swal.fire({
@@ -24,7 +38,7 @@ const ManageService = () => {
       if (result.isConfirmed) {
         axios
           .delete(
-            `https://offline-service-sharing-web-application-crud.vercel.app/services/${_id}`
+            `http://localhost:5000/services/${_id}`
           )
           .then((data) => {
             console.log(data.data);
@@ -46,24 +60,65 @@ const ManageService = () => {
       }
     });
 
-    // const services = manageService.find(
+    // const services = service.find(
     //   (service) => service.provider_email === user.email
     // );
     // console.log(services);
 
-    //
+    
   };
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-16">
-      {servicesDelete?.map((service) => (
-        <Service
-          key={service._id}
-          service={service}
-          handleDelete={handleDelete}
-        ></Service>
-      ))}
+    <div className="my-16">
+
+      <div className="">
+        <table className="table w-[70%] mx-auto">
+          <thead>
+            <tr className="text-lg bg-[#3e7172] text-white text-center ">
+              <th>No</th>
+              <th>Provider Img</th>
+              <th>Provider Name</th>
+              <th>Service Name</th>
+              <th>Service Price</th>
+              <th>Services Area</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          {services.map((service, index) => (
+            <tbody key={service._id}>
+              <tr className="text-center text-lg text-gray-500 font-medium">
+                <th>{index+1}</th>
+                <td>
+                  <div className="flex justify-center items-center gap-3">
+                    <div className="avatar">
+                      <div className="mask mask-squircle w-12 h-12">
+                        <img
+                          src={service.service_provider_img}
+                          alt="Avatar Tailwind CSS Component"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>{service.service_provider_name}</td>
+                <td>{service.service_name}</td>
+                <td>{service.service_price} $</td>
+                <td>{service.service_area}</td>
+                <div className="flex justify-center items-center my-4  gap-3 text-center">
+                  <Link to={`/update/${service._id}`} className="btn bg-[#5f988f] hover:bg-[#5f988f] text-white">
+                    Update
+                  </Link>
+                  <button onClick={() => handleDelete(service._id)} className="btn bg-red-500 hover:bg-red-500 text-white">
+                    Delete
+                  </button>
+                </div>
+              </tr>
+            </tbody>
+          ))}
+        </table>
+      </div>
     </div>
   );
 };
 
-export default ManageService;
+export default ServicesService;

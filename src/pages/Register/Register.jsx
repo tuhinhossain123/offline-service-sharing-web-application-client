@@ -18,7 +18,6 @@ const Register = () => {
     const imgUrl = e.target.text.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name, imgUrl, email, password);
     setError("");
 
     if (!/^.{6,}$/.test(password)) {
@@ -38,14 +37,13 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
-        // toast("User Registration successfully");
-        Swal.fire({
-          icon: "success",
-          title: "Success",
-          text: "User Registration successfully",
-          footer: '<a href="">Why do I have this issue?</a>',
-        });
+        toast.success("User Registration successfully");
+        // Swal.fire({
+        //   icon: "success",
+        //   title: "Success",
+        //   text: "User Registration successfully",
+        //   footer: '<a href="">Why do I have this issue?</a>',
+        // });
         updateProfile(result.user, { displayName: name, photoURL: imgUrl });
         e.target.reset();
         navigate("/");

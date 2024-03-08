@@ -18,7 +18,7 @@ const Login = () => {
 
     singIn(email, password)
       .then((result) => {
-        toast.success("Logged In Successful!");
+        toast.success("Logged In Successful!", result);
         e.target.reset();
         navigate("/");
       })

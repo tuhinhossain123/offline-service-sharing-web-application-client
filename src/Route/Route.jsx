@@ -29,12 +29,12 @@ const router = createBrowserRouter([
           ),
       },
       {
-        path: "/login",
-        element: <Login></Login>,
-      },
-      {
-        path: "/register",
-        element: <Register></Register>,
+        path: "/allServices",
+        element: <AllServices></AllServices>,
+        loader: () =>
+          fetch(
+            "https://offline-service-sharing-web-application-crud.vercel.app/services"
+          ),
       },
       {
         path: "/addServices",
@@ -52,11 +52,20 @@ const router = createBrowserRouter([
             <ManageService></ManageService>
           </PrivateRoute>
         ),
-        loader: () =>
-          fetch(
-            "https://offline-service-sharing-web-application-crud.vercel.app/services"
-          ),
+        // loader: () =>
+        //   fetch(
+        //     "https://offline-service-sharing-web-application-crud.vercel.app/services"
+        //   ),
       },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+
       {
         path: "/update/:id",
         element: <UpdateService></UpdateService>,
@@ -65,14 +74,7 @@ const router = createBrowserRouter([
             `https://offline-service-sharing-web-application-crud.vercel.app/services/${params.id}`
           ),
       },
-      {
-        path: "/allServices",
-        element: <AllServices></AllServices>,
-        loader: () =>
-          fetch(
-            "https://offline-service-sharing-web-application-crud.vercel.app/services"
-          ),
-      },
+
       {
         path: "/contactUs",
         element: <ContacUs></ContacUs>,

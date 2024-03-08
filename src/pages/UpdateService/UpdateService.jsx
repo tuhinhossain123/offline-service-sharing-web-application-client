@@ -39,7 +39,7 @@ const UpdateService = () => {
       .then((data) => {
         console.log(data);
         if (data.data.modifiedCount > 0) {
-          toast("User Services Update");
+          toast.success("User Services Update");
         }
       })
       .catch((error) => {

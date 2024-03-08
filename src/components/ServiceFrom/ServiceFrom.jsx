@@ -65,7 +65,7 @@ const ServiceFrom = ({ handleSubmit }) => {
                 <input
                   type="text"
                   name="service_name"
-                  placeholder="Service Name,"
+                  placeholder="Service Name"
                   className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black  rounded"
                 />
               </label>

@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { AuthContext } from "../../../pages/Provider/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
+import logo from "../../../assets/companylogo.png"
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user)
   const { id } = useParams();
 
   const handleLogOut = () => {
@@ -175,10 +175,11 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="hidden md:block">
-            <img
+            {/* <img
               src="https://demo.phlox.pro/agency-tour/wp-content/uploads/sites/333/2020/12/logo1.svg"
               alt=""
-            />
+            /> */}
+            <h2 className="text-5xl font-bold text-[#3e7172]">Tour & Guid</h2>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

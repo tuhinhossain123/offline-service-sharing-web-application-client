@@ -3,8 +3,34 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import MeetTeam from "../MeetTeam/MeetTeam";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const ContacUs = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_qnavzmk",
+        "template_q090ned",
+        form.current,
+        "oCGOoFBnlThyDZ0sR"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          // toast("Your Email Successfully")
+          from.reset()
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="border-2">
       <ContactBanner></ContactBanner>
@@ -22,7 +48,7 @@ const ContacUs = () => {
             <h2 className="text-5xl font-semibold pb-6 md:pb-8 text-[#5f988f]">
               Get In Touch
             </h2>
-            <form className="">
+            <form ref={form} onSubmit={sendEmail}>
               <div className="form-control  border-2 rounded-xl caret-black mb-4">
                 <input
                   type="name"
@@ -36,7 +62,7 @@ const ContacUs = () => {
                 <input
                   type="name"
                   placeholder="Your Email*"
-                  name="from_name"
+                  name="from_email"
                   required
                   className="input bg-gray-100 text-lg focus:outline-none"
                 />
@@ -44,7 +70,7 @@ const ContacUs = () => {
 
               <div className="form-control w-full border-2 rounded-xl caret-black">
                 <textarea
-                  name=""
+                  name="message"
                   id=""
                   cols="10"
                   rows="10"

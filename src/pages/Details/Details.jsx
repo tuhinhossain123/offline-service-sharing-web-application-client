@@ -61,7 +61,7 @@ const Details = () => {
             className="rounded-xl w-full h-full"
           />
         </div>
-        <div className="space-y-3 px-5 w-[70%] mx-auto py-8">
+        <div className="space-y-3 px-5 w-[80rem] mx-auto py-8">
           <h2 className="text-5xl text-gray-800 font-semibold">
             {details.service_name}
           </h2>
