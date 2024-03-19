@@ -52,10 +52,6 @@ const router = createBrowserRouter([
             <ManageService></ManageService>
           </PrivateRoute>
         ),
-        // loader: () =>
-        //   fetch(
-        //     "https://offline-service-sharing-web-application-crud.vercel.app/services"
-        //   ),
       },
       {
         path: "/login",
@@ -71,7 +67,7 @@ const router = createBrowserRouter([
         element: <UpdateService></UpdateService>,
         loader: ({ params }) =>
           fetch(
-            `https://offline-service-sharing-web-application-crud.vercel.app/services/${params.id}`
+            `http://localhost:5000/manage/${params.id}`
           ),
       },
 

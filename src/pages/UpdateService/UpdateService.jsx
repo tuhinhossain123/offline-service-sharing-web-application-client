@@ -6,6 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const UpdateService = () => {
   const data = useLoaderData();
+  console.log(data);
   const { user } = useContext(AuthContext);
 
   const handleUpdate = (e) => {
@@ -33,7 +34,7 @@ const UpdateService = () => {
 
     axios
       .patch(
-        `https://offline-service-sharing-web-application-crud.vercel.app/services/${data._id}`,
+        `http://localhost:5000/manage/${data._id}`,
         user
       )
       .then((data) => {
@@ -68,6 +69,7 @@ const UpdateService = () => {
                   placeholder="Your Name"
                   className="input bg-gray-100 text-lg w-full focus:outline-none placeholderact-black rounded-l-lg"
                   defaultValue={user?.displayName}
+                  readOnly
                 />
               </label>
             </div>
@@ -82,6 +84,7 @@ const UpdateService = () => {
                   placeholder="Your Email"
                   className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black rounded"
                   defaultValue={user?.email}
+                  readOnly
                 />
               </label>
             </div>
@@ -100,6 +103,7 @@ const UpdateService = () => {
                   placeholder="URL"
                   className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black rounded"
                   defaultValue={data.service_img}
+                  required
                 />
               </label>
             </div>
@@ -115,6 +119,7 @@ const UpdateService = () => {
                   name="service_name"
                   placeholder="Service Name"
                   className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black rounded"
+                  required
                 />
               </label>
             </div>
@@ -130,6 +135,7 @@ const UpdateService = () => {
                   name="service_price"
                   placeholder="Price"
                   className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black rounded"
+                  required
                 />
               </label>
             </div>
@@ -145,6 +151,7 @@ const UpdateService = () => {
                   name="service_area"
                   placeholder="Service Area"
                   className="input bg-gray-100 text-lg w-full focus:outline-none placeholder:text-black rounded"
+                  required
                 />
               </label>
             </div>
@@ -158,6 +165,7 @@ const UpdateService = () => {
             <textarea
               className=" bg-gray-100 p-3 text-lg w-full focus:outline-none placeholder:text-black rounded"
               name="service_des"
+              required
               placeholder="Service Description"
               id=""
               cols="10"

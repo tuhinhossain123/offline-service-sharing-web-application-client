@@ -1,4 +1,4 @@
-import logo from "../../assets/footer.svg"
+import logo from "../../assets/logo.png"
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-100 px-8 md:px-16 pt-4  text-white">
+    <div className="bg-gray-50 px-8 md:px-16 pt-4  text-white">
       <div>
-        <div className="w-[8rem] md:w-[10rem]">
+        <div className="w-[8rem] md:w-[15rem]">
           <img
             src={logo}
             alt=""
@@ -31,7 +31,7 @@ const Footer = () => {
             name=""
             id=""
             placeholder="Enter Your Email"
-            className=" bg-white border-0 px-3 py-4 w-full md:w-1/2 rounded-l-lg placeholder:text-black focus:outline-none"
+            className=" bg-white border-0 px-3 py-4 w-full md:w-1/2 rounded-l-lg placeholder:text-black focus:outline-none bg-base-100"
           />
           <button className="px-3 py-4 font-bold rounded-none rounded-r-lg border border-white text-white bg-[#3e7172]">
             Subscribe

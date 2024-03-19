@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { AuthContext } from "../../../pages/Provider/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
-import logo from "../../../assets/companylogo.png"
+import logo from "../../../assets/logo.png"
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -25,7 +25,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#5f988f] font-medium"
+              ? "text-teal-600 underline font-medium" 
               : ""
           }
         >
@@ -39,7 +39,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#5f988f]  font-medium"
+              ? "text-teal-600 underline font-medium"
               : ""
           }
         >
@@ -53,7 +53,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#5f988f] font-medium"
+              ? "text-teal-600 underline font-medium"
               : ""
           }
         >
@@ -69,7 +69,7 @@ const Navbar = () => {
                 isPending
                   ? "pending"
                   : isActive
-                  ? "text-[#5f988f]  font-medium"
+                  ? "text-teal-600 underline font-medium"
                   : ""
               }
             >
@@ -91,7 +91,7 @@ const Navbar = () => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content lg:z-[20] menu p-2 shadow-2xl bg-[#3e7172] text-white rounded-box w-52"
+                  className="dropdown-content lg:z-[30]  menu p-2 shadow-2xl bg-[#3e7172] text-white rounded-box w-52"
                 >
                   <li className="text-xl">
                     <a>My-services</a>
@@ -103,7 +103,7 @@ const Navbar = () => {
                         isPending
                           ? "pending"
                           : isActive
-                          ? "text-slate-600 font-medium"
+                          ? "text-slate-600 font-medium "
                           : ""
                       }
                     >
@@ -174,12 +174,12 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div className="hidden md:block">
-            {/* <img
-              src="https://demo.phlox.pro/agency-tour/wp-content/uploads/sites/333/2020/12/logo1.svg"
+          <div className="hidden md:block h- w-[15rem]">
+            <img
+            src={logo}
               alt=""
-            /> */}
-            <h2 className="text-5xl font-bold text-[#3e7172]">Tour & Guid</h2>
+            />
+            {/* <h2 className="text-5xl font-bold text-[#3e7172]">Tour & Guid</h2> */}
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

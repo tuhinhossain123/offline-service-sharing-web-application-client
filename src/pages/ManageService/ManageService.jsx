@@ -1,5 +1,4 @@
 import { Link, useLoaderData } from "react-router-dom";
-// import Service from "../Service/Service";
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -26,6 +25,7 @@ const ServicesService = () => {
   
 
   const handleDelete = (_id) => {
+    console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -38,7 +38,7 @@ const ServicesService = () => {
       if (result.isConfirmed) {
         axios
           .delete(
-            `http://localhost:5000/services/${_id}`
+            `http://localhost:5000/manage/${_id}`
           )
           .then((data) => {
             console.log(data.data);
