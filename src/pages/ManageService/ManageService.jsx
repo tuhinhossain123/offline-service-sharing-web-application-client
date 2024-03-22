@@ -19,7 +19,7 @@ const ServicesService = () => {
 
   if(services.length==0){
     return ( 
-      <div className="my-10"><p className="text-3xl font-semibold text-center">Please Add Service</p></div>
+      <div className="my-16"><p className="text-3xl font-semibold text-center text-[#5f988f]">Please Added Service</p></div>
     )
   }
   
@@ -60,11 +60,6 @@ const ServicesService = () => {
       }
     });
 
-    // const services = service.find(
-    //   (service) => service.provider_email === user.email
-    // );
-    // console.log(services);
-
     
   };
 
@@ -102,7 +97,7 @@ const ServicesService = () => {
                 </td>
                 <td>{service.service_provider_name}</td>
                 <td>{service.service_name}</td>
-                <td>{service.service_price} $</td>
+                <td><span className="text-2xl text-[#3e7172]">$</span> {service.service_price}</td>
                 <td>{service.service_area}</td>
                 <div className="flex justify-center items-center my-4  gap-3 text-center">
                   <Link to={`/update/${service._id}`} className="btn bg-[#5f988f] hover:bg-[#5f988f] text-white">

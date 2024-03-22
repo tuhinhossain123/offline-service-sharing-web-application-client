@@ -1,17 +1,16 @@
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const UpdateService = () => {
   const data = useLoaderData();
-  console.log(data);
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate()
 
   const handleUpdate = (e) => {
     e.preventDefault();
-
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
@@ -30,17 +29,13 @@ const UpdateService = () => {
       service_area,
       service_des,
     };
-    console.log(user);
-
+  
     axios
-      .patch(
-        `http://localhost:5000/manage/${data._id}`,
-        user
-      )
+      .patch(`http://localhost:5000/manage/${data._id}`, user)
       .then((data) => {
-        console.log(data);
         if (data.data.modifiedCount > 0) {
           toast.success("User Services Update");
+          navigate("/manageServices")
         }
       })
       .catch((error) => {
@@ -173,7 +168,9 @@ const UpdateService = () => {
             ></textarea>
           </div>
           <div className="flex justify-center">
-            <button className="btn btn-block bg-gray-200 mt-3 text-xl">Update Services</button>
+            <button className="btn btn-block bg-gray-200 mt-3 text-xl">
+              Update Services
+            </button>
             <ToastContainer />
           </div>
         </form>

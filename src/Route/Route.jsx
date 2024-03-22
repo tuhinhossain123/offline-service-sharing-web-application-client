@@ -66,9 +66,7 @@ const router = createBrowserRouter([
         path: "/update/:id",
         element: <UpdateService></UpdateService>,
         loader: ({ params }) =>
-          fetch(
-            `http://localhost:5000/manage/${params.id}`
-          ),
+          fetch(`http://localhost:5000/manageId/${params.id}`),
       },
 
       {
