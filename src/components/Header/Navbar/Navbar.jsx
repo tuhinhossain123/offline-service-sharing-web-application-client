@@ -147,7 +147,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="md:px-20 py-2 bg-gray-50">
+    <div className="md:px-20 py-1 bg-gray-50">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown ">
@@ -174,13 +174,13 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div className="hidden md:block h- w-[15rem]">
+          <Link to="/" className="hidden lg:block h- w-[15rem]">
             <img
             src={logo}
               alt=""
             />
-            {/* <h2 className="text-5xl font-bold text-[#3e7172]">Tour & Guid</h2> */}
-          </div>
+          
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>

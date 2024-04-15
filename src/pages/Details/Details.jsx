@@ -50,29 +50,29 @@ const Details = () => {
   };
 
   return (
-    <div className=" my-16">
+    <div className="md:mt-10">
       <ToastContainer />
 
       <div className="">
-        <div className="w-[80rem] h-[40rem] mx-auto">
+        <div className="lg:w-[80rem] lg:h-[40rem] mx-auto px-4">
           <img
             src={details.service_img}
             alt=""
             className="rounded-xl w-full h-full"
           />
         </div>
-        <div className="space-y-3 px-5 w-[80rem] mx-auto py-8">
-          <h2 className="text-5xl text-gray-800 font-semibold">
+        <div className="space-y-3 px-5 lg:w-[80rem] mx-auto py-8">
+          <h2 className="text-5xl text-teal-700 font-semibold">
             {details.service_name}
           </h2>
 
-          <h2 className="text-xl pt-2 text-gray-500 font-semibold">
+          <h2 className="text-xl pt-2 text-gray-500 font-semibold text-justify">
             {details.service_des}
           </h2>
           <div className="flex justify-between items-center">
             <h2>
-              <span className="text-lg ">Price: </span>
-              <span className="text-2xl font-bold pr-2">
+              <span className="text-xl font-medium">Price: </span>
+              <span className="text-3xl font-bold pr-2">
                 ${details.service_price}
               </span>
             </h2>
@@ -85,13 +85,17 @@ const Details = () => {
           </div>
           <div className="divider divider-neutral pt-20"></div>
           <div>
-            {/* modal start here */}
 
             <dialog
               id="my_modal_5"
               className="modal modal-bottom sm:modal-middle"
             >
               <div className="modal-box">
+                <form method="dialog">
+                  <button className="btn btn-lg btn-circle btn-ghost absolute right-2 top-2 pb-8">
+                    ✕
+                  </button>
+                </form>
                 <div className="">
                   <form onSubmit={submitFrom} className="w-full ">
                     <div className="form-control w-full">
@@ -198,14 +202,8 @@ const Details = () => {
                       </label>
                     </div>
                     <button className="bg-[#02a388] btn-block py-2 px-3 text-white rounded mt-4">
-                      Purchase
+                      Booking Confirm
                     </button>
-                  </form>
-                </div>
-                <div className="modal-action">
-                  <form method="dialog">
-                    {/* if there is a button in form, it will close the modal */}
-                    <button className="btn">Close</button>
                   </form>
                 </div>
               </div>

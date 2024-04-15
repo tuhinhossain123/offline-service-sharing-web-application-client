@@ -1,4 +1,4 @@
-import allService from "../../../assets/banner4.png"
+import allService from "../../../assets/banner2.jpg"
 
 const AllServiceBanner = () => {
     return (

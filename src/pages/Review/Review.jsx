@@ -6,12 +6,12 @@ import { IoStar } from "react-icons/io5";
 
 const Review = () => {
   return (
-    <div className="my-24">
+    <div className="mt-16 mb-24">
       <h2 className="text-4xl md:px-10 text-center pb-6 md:-pb-0 md:text-5xl text-[#5f988f] font-semibold ">
         Testimonial
       </h2>
       <div  >
-        <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8 md:px-10 my-14 space-y-16 md:space-y-0">
+        <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8 md:px-16 my-14 space-y-16 md:space-y-0">
           <div className="">
             <div className="avatar absolute -mt-16 ml-6 lg:ml-12  pb-8">
               <div className="w-28 rounded-full">

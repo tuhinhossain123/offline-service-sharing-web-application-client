@@ -1,10 +1,10 @@
 import React from "react";
 import CountUp from "react-countup";
-import img from "../../assets/banner3.png"
+import img from "../../assets/banner2.jpg"
 
 const Achievement = () => {
   return (
-    <div className="my-10">
+    <div className="mt-1">
       <h2 className="text-4xl px-6 md:px-10 pb-6 text-center md:-pb-0 md:text-5xl text-[#5f988f] font-semibold">
         Achievement
       </h2>

@@ -28,7 +28,7 @@ const AllServices = () => {
           className="input bg-[#5f988f] text-white text-lg w-full p-2 focus:outline-none placeholder:text-white focus:border-[#5f988f]"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10 mt-16 mb-16 md:w-[90%] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 mt-16 mb-16 md:w-[90%] mx-auto">
         {showAll?.slice(0, seeAll).map((show) => (
           <Show
             key={show._id}

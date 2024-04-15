@@ -1,4 +1,4 @@
-import allService from "../../../assets/banner4.png";
+import allService from "../../../assets/banner1.jpg";
 
 const ContactBanner = () => {
   return (

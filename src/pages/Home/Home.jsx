@@ -9,6 +9,7 @@ import Achievement from "../Achievement/Achievement";
 const Home = () => {
   const popularService = useLoaderData();
 
+
   return (
     <>
       <div className="">
@@ -21,7 +22,7 @@ const Home = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="px-6 md:px-16 md:my-14 my-16"
+        className="md:px-16 md:my-14 mt-10"
       >
         <h2 className="text-4xl md:px-10 text-center pb-10 md:-pb-0 md:text-5xl text-[#5f988f] font-semibold ">
         Special Service

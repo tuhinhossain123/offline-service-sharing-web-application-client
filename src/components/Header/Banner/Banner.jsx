@@ -3,10 +3,10 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import banner1 from "../../../assets/banner1.png";
-import banner2 from "../../../assets/banner2.png";
-import banner3 from "../../../assets/banner3.png";
-import banner4 from "../../../assets/banner4.png";
+import banner1 from "../../../assets/banner3.jpg";
+import banner2 from "../../../assets/banner2.jpg";
+import banner3 from "../../../assets/banner1.jpg";
+import banner4 from "../../../assets/banner4.jpg";
 import { Link } from "react-router-dom";
 
 const Banner = () => {
@@ -30,17 +30,16 @@ const Banner = () => {
           <img src={banner1} className="w-full h-[60vh] md:h-[90vh]" />
           <div className="absolute flex items-center gap-3 left-0 top-0 bottom-0 bg-gradient-to-r from-[#0D0907] 0.00] to-[21, 21, 21, 0.00]  h-full">
             <div className="text-white  md:w-3/4 pl-16 md:pl-24">
-              <h2 className=" text-2xl md:text-5xl font-bold">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Eveniet, quidem!
+              <h2 className=" text-2xl md:text-4xl font-bold">
+              Dive into the beauty of the Great Barrier Reef on our snorkeling adventure in Australia.
               </h2>
 
-              <div className="pt-4">
+              <div className="pt-8">
                 <Link to="/allServices" className="btn  bg-[#3e7172] hover:bg-[#3e7172] border-none text-white  mr-3">
                   Book Now
                 </Link>
                 <Link to="/contactUs" className="btn btn-outline hover:bg-black text-white">
-                  +888 0156356376
+                  Contact Now
                 </Link>
               </div>
             </div>
@@ -53,16 +52,15 @@ const Banner = () => {
           <div className="absolute flex items-center gap-3 left-0 top-0 bottom-0 bg-gradient-to-r from-[#0D0907] 0.00] to-[21, 21, 21, 0.00]  h-full">
             <div className="text-white  md:w-3/4 pl-16 md:pl-24">
               <h2 className=" text-2xl md:text-5xl font-bold">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Eveniet, quidem!
+              Explore ancient ruins and vibrant markets on our cultural tour of Peru.
               </h2>
 
-              <div className="pt-4">
+              <div className="pt-8">
                 <Link to="/allServices" className="btn  bg-[#3e7172] hover:bg-[#3e7172] border-none text-white  mr-3">
                   Book Now
                 </Link>
-                <Link to="/contactUs" className="btn btn-outline hover:bg-black text-white">
-                  +888 0156356376
+                <Link to="/contactUs" className="btn btn-outline  hover:bg-black text-white">
+                  Contact Now
                 </Link>
               </div>
             </div>
@@ -75,16 +73,15 @@ const Banner = () => {
           <div className="absolute flex items-center gap-3 left-0 top-0 bottom-0 bg-gradient-to-r from-[#0D0907] 0.00] to-[21, 21, 21, 0.00]  h-full">
             <div className="text-white  md:w-3/4 pl-16 md:pl-24">
               <h2 className=" text-2xl md:text-5xl font-bold">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Eveniet, quidem!
+              Embark on a thrilling safari to witness the Big Five in their natural habitat in Kenya.
               </h2>
 
-              <div className="pt-4">
+              <div className="pt-8">
                 <Link to="/allServices" className="btn  bg-[#3e7172] hover:bg-[#3e7172] border-none text-white  mr-3">
                   Book Now
                 </Link>
                 <Link to="/contactUs" className="btn btn-outline hover:bg-black text-white">
-                  +888 0156356376
+                  Contact Now
                 </Link>
               </div>
             </div>
@@ -97,16 +94,15 @@ const Banner = () => {
           <div className="absolute flex items-center gap-3 left-0 top-0 bottom-0 bg-gradient-to-r from-[#0D0907] 0.00] to-[21, 21, 21, 0.00]  h-full">
             <div className="text-white  md:w-3/4 pl-16 md:pl-24">
               <h2 className=" text-2xl md:text-5xl font-bold">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Eveniet, quidem!
+              Discover the magic of the Northern Lights on our tour of Iceland.
               </h2>
 
-              <div className="pt-4">
+              <div className="pt-8">
                 <button className="btn  bg-[#3e7172] border-none text-white  mr-3">
                   Book Now
                 </button>
                 <button className="btn btn-outline text-white">
-                  +888 0156356376
+                  Contact Now
                 </button>
               </div>
             </div>
