@@ -1,64 +1,57 @@
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+
 const Footer = () => {
   return (
-    <div className="bg-gray-100 px-8 md:px-16 pt-4  text-white">
-      <div>
-        <div className="w-[8rem] md:w-[15rem]">
-          <img
-            src={logo}
-            alt=""
-            className="w-full"
-          />
+    <div className="text-white px-16 pt-10 bg-[#5f988f]">
+      <div className="footer ">
+      <nav>
+        <h6 className="font-bold text-[1.5rem] text-white pb-4">Services</h6>
+        <div className="flex flex-col space-y-3">
+          <Link className="text-lg font-semibold">Branding</Link>
+          <Link className="text-lg font-semibold">Design</Link>
+          <Link className="text-lg font-semibold">Marketing</Link>
+          <Link className="text-lg font-semibold">Advertisement</Link>
         </div>
-      </div>
-      <div className="flex flex-col md:flex-row justify-between items-center">
-        <div className="pt-2 w-full md:w-2/4">
-          <p className="text-xl text-gray-700 font-semibold tracking-wider">
-            While the lovely valley teems with vapour  around me, and the
-            meridian sun strikes the upper surface of the impenetrable
-            foliage of my trees.
-          </p>
+      </nav>
+      <nav>
+        <h6 className="font-bold text-[1.5rem] text-white pb-4">Company</h6>
+        <div className="flex flex-col space-y-3">
+          <Link className="text-lg font-semibold">Special Service</Link>
+          <Link className="text-lg font-semibold">Contact</Link>
+          <Link className="text-lg font-semibold">Popular Destinations</Link>
+          <Link className="text-lg font-semibold">Achievement</Link>
         </div>
-        <div className="w-full flex justify-end pb-8 pt-6">
-          <input
-            type="email"
-            name=""
-            id=""
-            placeholder="Enter Your Email"
-            className=" bg-white border-0 px-3 py-4 w-full md:w-1/2 rounded-l-lg placeholder:text-black focus:outline-none bg-base-100"
-          />
-          <button className="px-3 py-4 font-bold rounded-none rounded-r-lg border border-white text-white bg-[#3e7172]">
-            Subscribe
-          </button>
-        </div>
-      </div>
-      <div className="divider"></div> 
-      <div className="flex flex-col-reverse md:flex-row justify-between pb-2 pt-4 md:gap-2">
-        <p className="text-sm md:text-xl font-semibold text-gray-700 text-center">
-          © 2024 - All right reserved by Tour & Guid
-        </p>
-        <div className="grid grid-flow-col gap-10 md:gap-16 pb-8">
+      </nav>
+      <nav>
+        <h6 className="font-bold text-[1.5rem] text-white pb-6">Social</h6>
+        <div className="grid grid-flow-col gap-16">
           <Link>
-            <FaFacebookF className="text-3xl text-[#5f988f]" />
+            <FaFacebookF className="text-3xl " />
           </Link>
           <Link>
-            <FaLinkedinIn className="text-3xl text-[#5f988f]" />
+            <FaLinkedinIn className="text-3xl " />
           </Link>
           <Link>
-            <FaTelegramPlane className="text-3xl text-[#5f988f]" />
+            <FaTelegramPlane className="text-3xl " />
           </Link>
           <Link>
-            <FaInstagram className="text-3xl text-[#5f988f]" />
+            <FaInstagram className="text-3xl " />
           </Link>
         </div>
-      </div>
+      </nav>
+     
     </div>
+    <div>
+    <p className="text-center text-[1.3rem] pt-8 pb-2">Copyright © 2024 - All right reserved by Tour Agency Ltd</p>
+    </div>
+    </div>
+   
   );
 };
 
