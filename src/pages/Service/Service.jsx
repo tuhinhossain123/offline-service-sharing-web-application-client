@@ -13,34 +13,11 @@ const Service = ({ manage, handleDelete }) => {
     service_price,
     service_area,
   } = manage;
-  // const {user}=useContext(AuthContext)
-  // console.log(user);
+  
 
   return (
-    // <div className="rounded-b-lg bg-base-100 shadow-xl">
-    //   <img src={service_img} alt="" className="rounded-t-lg w-full" />
-    //   <div className="p-4 space-y-4">
-    //     <div className="">
-    //       <h2 className="text-2xl font-semibold">{service_name}</h2>
-    //     </div>
-    //     <div className="flex justify-between px-2 ">
-    //       <button
-    //         onClick={() => handleDelete(_id)}
-    //         className="p-3 font-bold rounded bg-[#02a388] text-white"
-    //       >
-    //         Delete
-    //       </button>
-    //       <p className="p-3 font-bold rounded bg-[#02a388] text-white">
-    //         <Link to={`/update/${_id}`}>Update</Link>
-    //       </p>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="">
       <div className="">
-        {/* <h2 className="text-4xl md:px-10 text-center pb-10 md:-pb-0 md:text-5xl text-[#5f988f] font-semibold ">
-          Manage Your Service
-        </h2> */}
         <table className=" table w-[70%] mx-auto">
           <thead>
             <tr className="text-lg bg-[#3e7172] text-white text-center ">

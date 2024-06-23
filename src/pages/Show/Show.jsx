@@ -11,11 +11,11 @@ const Show = ({ show, searchItem, setSearchItem }) => {
 
   return (
     <div className="rounded-t-lg bg-gray-50 shadow-md hover:drop-shadow-2xl hover-shadow-[#3e7172] text-gray-500">
-      <div className="h-[25rem]">
+      <div className="h-[20rem]">
         <img src={service_img} alt="" className="rounded w-full h-full " />
       </div>
       <div className="p-5 space-y-3 rounded-r-lg">
-        <h2 className="text-3xl font-semibold text-black">{service_name}</h2>
+        <h2 className="text-2xl lg:text-3xl font-semibold text-black">{service_name}</h2>
         <p className="font-lg font-semibold text-gray-400 ">
           {service_des.slice(0, 90)}...
         </p>

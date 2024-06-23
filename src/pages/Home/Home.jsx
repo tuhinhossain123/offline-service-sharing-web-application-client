@@ -22,7 +22,7 @@ const Home = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="md:px-16 md:my-14 mt-10"
+        className="lg:px-16  mt-10"
       >
         <h2 className="text-4xl md:px-10 text-center pb-10 md:-pb-0 md:text-5xl text-[#5f988f] font-semibold ">
         Special Service

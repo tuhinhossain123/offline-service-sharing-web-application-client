@@ -9,14 +9,12 @@ const MySchedules = () => {
 
   useEffect(() => {
     axios
-      .get(
-        `https://offline-service-sharing-web-application-crud.vercel.app/booking/${user?.email}`
+      .get(`https://offline-service-sharing-web-application-crud.vercel.app/booking/${user?.email}`
       )
       .then((data) => {
         setMyServices(data.data);
       });
 
-    console.log(myServices);
   }, [user]);
 
   return (

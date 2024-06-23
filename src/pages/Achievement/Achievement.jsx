@@ -8,7 +8,7 @@ const Achievement = () => {
       <h2 className="text-4xl px-6 md:px-10 pb-6 text-center md:-pb-0 md:text-5xl text-[#5f988f] font-semibold">
         Achievement
       </h2>
-      <div className="md:h-[90vh] lg:h-[50vh] py-4  flex items-center"  style={{
+      <div className="md:h-[110vh] lg:h-[50vh] py-4  flex items-center"  style={{
           backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${img})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

@@ -29,42 +29,42 @@ const PopularDestinations = () => {
         className="mySwiper mb-16"
       >
         <SwiperSlide className="">
-          <img src={p1} alt="" className="h-[10rem] md:h-full"/>
+          <img src={p1} alt="" className="w-full h-[15rem] md:h-[20rem] lg:h-full"/>
           <h3 className="text-center -mt-16  text-white font-semibold text-sm md:text-xl   uppercase flex items-center justify-center gap-2">
             <FaLocationDot className="hidden md:block"/>
             London
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p2} alt="" className="h-[10rem] md:h-full"/>
+          <img src={p2} alt="" className="w-full h-[15rem] md:h-[20rem] lg:h-full"/>
           <h3 className="text-center -mt-16 text-white font-semibold text-sm md:text-xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot className="hidden md:block"/>
             Bankok
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p3} alt="" className="h-[10rem] md:h-full"/>
+          <img src={p3} alt="" className="w-full h-[15rem] md:h-[20rem] lg:h-full"/>
           <h3 className="text-center -mt-16  text-white font-semibold text-sm md:text-xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot className="hidden md:block"/>
             Canada
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p4} alt="" className="h-[10rem] md:h-full"/>
+          <img src={p4} alt="" className="w-full h-[15rem] md:h-[20rem] lg:h-full"/>
           <h3 className="text-center -mt-16  text-white font-semibold text-sm md:text-xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot className="hidden md:block"/>
             France
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p5} alt="" className="h-[10rem] md:h-full"/>
+          <img src={p5} alt="" className="w-full h-[15rem] md:h-[20rem] lg:h-full"/>
           <h3 className="text-center -mt-16  text-white font-semibold text-sm md:text-xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot className="hidden md:block"/>
             Italy
           </h3>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={p6} alt="" className="h-[10rem] md:h-full"/>
+          <img src={p6} alt="" className="w-full h-[15rem] md:h-[20rem] lg:h-full"/>
           <h3 className="text-center -mt-16  text-white font-semibold text-sm md:text-xl  uppercase flex items-center justify-center gap-2">
             <FaLocationDot className="hidden md:block"/>
             morokko

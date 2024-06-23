@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="text-white px-16 pt-10 bg-[#5f988f]">
+    <div className="text-white px-8 md:px-16 pt-10 bg-[#5f988f]">
       <div className="footer ">
       <nav>
         <h6 className="font-bold text-[1.5rem] text-white pb-4">Services</h6>
@@ -30,7 +30,7 @@ const Footer = () => {
       </nav>
       <nav>
         <h6 className="font-bold text-[1.5rem] text-white pb-6">Social</h6>
-        <div className="grid grid-flow-col gap-16">
+        <div className="grid grid-flow-col gap-10 md:gap-16">
           <Link>
             <FaFacebookF className="text-3xl " />
           </Link>
@@ -48,7 +48,7 @@ const Footer = () => {
      
     </div>
     <div>
-    <p className="text-center text-[1.3rem] pt-8 pb-2">Copyright © 2024 - All right reserved by Tour Agency Ltd</p>
+    <p className="text-center text-[1rem] md:text-[1.3rem] pt-12 pb-2">Copyright © 2024 - All right reserved by Tour Agency Ltd</p>
     </div>
     </div>
    
