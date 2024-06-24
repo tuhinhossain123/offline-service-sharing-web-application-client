@@ -14,7 +14,7 @@ import p6 from "../../assets/populer6.jpg";
 const PopularDestinations = () => {
   return (
     <div className="mt-10">
-      <h2 className="text-4xl md:text-4xl text-center px-6 md:px-10 pb-8 md:-pb-0 md:text-5xl text-[#5f988f] font-semibold">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl text-center px-6 md:px-10 pb-8 md:-pb-0  text-[#5f988f] font-semibold">
         Popular Destinations
       </h2>
       <Swiper

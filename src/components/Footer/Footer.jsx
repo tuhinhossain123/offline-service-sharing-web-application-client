@@ -30,7 +30,7 @@ const Footer = () => {
       </nav>
       <nav>
         <h6 className="font-bold text-[1.5rem] text-white pb-6">Social</h6>
-        <div className="grid grid-flow-col gap-10 md:gap-16">
+        <div className="grid grid-flow-col gap-6 md:gap-10">
           <Link>
             <FaFacebookF className="text-3xl " />
           </Link>

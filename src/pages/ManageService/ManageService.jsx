@@ -10,19 +10,24 @@ const ServicesService = () => {
   const [servicesDelete, setServicesDelete] = useState(services);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/manage/${user.email}`)
+    fetch(
+      `https://offline-service-sharing-web-application-crud.vercel.app/manage/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setServices(data);
       });
-  },[user]);
+  }, [user]);
 
-  if(services.length==0){
-    return ( 
-      <div className="my-16"><p className="text-3xl font-semibold text-center text-[#5f988f]">Please Added Service</p></div>
-    )
+  if (services.length == 0) {
+    return (
+      <div className="my-16">
+        <p className="text-3xl font-semibold text-center text-[#5f988f]">
+          Please Added Service
+        </p>
+      </div>
+    );
   }
-  
 
   const handleDelete = (_id) => {
     console.log(_id);
@@ -38,7 +43,7 @@ const ServicesService = () => {
       if (result.isConfirmed) {
         axios
           .delete(
-            `http://localhost:5000/manage/${_id}`
+            `https://offline-service-sharing-web-application-crud.vercel.app/manage/${_id}`
           )
           .then((data) => {
             console.log(data.data);
@@ -59,15 +64,12 @@ const ServicesService = () => {
           });
       }
     });
-
-    
   };
 
   return (
     <div className="my-16">
-
-      <div className="">
-        <table className="table w-[70%] mx-auto">
+      <div className="lg:w-[90%] mx-auto">
+        <table className="table  ">
           <thead>
             <tr className="text-lg bg-[#3e7172] text-white text-center ">
               <th>No</th>
@@ -82,7 +84,7 @@ const ServicesService = () => {
           {services.map((service, index) => (
             <tbody key={service._id}>
               <tr className="text-center text-lg text-gray-500 font-medium">
-                <th>{index+1}</th>
+                <th>{index + 1}</th>
                 <td>
                   <div className="flex justify-center items-center gap-3">
                     <div className="avatar">
@@ -97,13 +99,22 @@ const ServicesService = () => {
                 </td>
                 <td>{service.service_provider_name}</td>
                 <td>{service.service_name}</td>
-                <td><span className="text-2xl text-[#3e7172]">$</span> {service.service_price}</td>
+                <td>
+                  <span className="text-2xl text-[#3e7172]">$</span>{" "}
+                  {service.service_price}
+                </td>
                 <td>{service.service_area}</td>
                 <div className="flex justify-center items-center my-4  gap-3 text-center">
-                  <Link to={`/update/${service._id}`} className="btn bg-[#5f988f] hover:bg-[#5f988f] text-white">
+                  <Link
+                    to={`/update/${service._id}`}
+                    className="btn bg-[#5f988f] hover:bg-[#5f988f] text-white"
+                  >
                     Update
                   </Link>
-                  <button onClick={() => handleDelete(service._id)} className="btn bg-red-500 hover:bg-red-500 text-white">
+                  <button
+                    onClick={() => handleDelete(service._id)}
+                    className="btn bg-red-500 hover:bg-red-500 text-white"
+                  >
                     Delete
                   </button>
                 </div>

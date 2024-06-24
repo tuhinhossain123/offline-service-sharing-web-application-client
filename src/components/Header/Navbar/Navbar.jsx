@@ -187,7 +187,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
-          <div className="dropdown dropdown-bottom flex justify-center mr-12 md:mr-4">
+          <div className="dropdown dropdown-bottom flex justify-center mr-10 md:mr-4">
             <label tabIndex={0} className="text-black">
               {user ? (
                 <>

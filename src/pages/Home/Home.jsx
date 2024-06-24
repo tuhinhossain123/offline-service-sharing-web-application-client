@@ -24,7 +24,7 @@ const Home = () => {
         }}
         className="lg:px-16  mt-10"
       >
-        <h2 className="text-4xl md:px-10 text-center pb-10 md:-pb-0 md:text-5xl text-[#5f988f] font-semibold ">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl md:px-10 text-center pb-8 md:-pb-0  text-[#5f988f] font-semibold ">
         Special Service
         </h2>
 

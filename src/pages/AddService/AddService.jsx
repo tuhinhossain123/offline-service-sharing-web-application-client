@@ -29,18 +29,16 @@ const AddService = () => {
       service_des,
     };
 
-   
-
     axios
       .post(
-        "http://localhost:5000/manage",
+        "https://offline-service-sharing-web-application-crud.vercel.app/manage",
         user
       )
       .then((data) => {
         console.log(data);
         if (data.data.insertedId) {
           toast.success("Services Added");
-          e.target.reset()
+          e.target.reset();
           navigate("/manageServices");
         }
       })

@@ -12,9 +12,9 @@ const Booking = ({ booking }) => {
   } = booking;
 
   return (
-    <div className="rounded-b-lg bg-base-100 shadow-xl">
+    <div className="rounded-b-lg bg-base-100 shadow-xl w-full">
       <div className="h-[25rem]">
-        <img src={service_img} alt="" className="rounded-t-lg w-full h-full cover" />
+        <img src={service_img} alt="" className="rounded-t-lg w-full h-full " />
       </div>
       <div className="space-y-2 mt-3 px-5 mb-4">
         <h2 className="text-2xl font-semibold text-teal-700 ">{serviceName}</h2>

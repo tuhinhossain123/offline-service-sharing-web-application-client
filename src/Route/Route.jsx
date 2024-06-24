@@ -66,7 +66,9 @@ const router = createBrowserRouter([
         path: "/update/:id",
         element: <UpdateService></UpdateService>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/manageId/${params.id}`),
+          fetch(
+            `https://offline-service-sharing-web-application-crud.vercel.app/manageId/${params.id}`
+          ),
       },
 
       {

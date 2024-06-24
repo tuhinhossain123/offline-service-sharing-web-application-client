@@ -11,13 +11,13 @@ const Services = ({ service }) => {
   } = service;
 
   return (
-    <div className="rounded-md  bg-gray-100 shadow-md hover:shadow-2xl hover-shadow-gray-800 text-gray-500">
-      <div className="md:h-[20rem] lg:h-[30rem]">
-        <img src={service_img} alt="" className=" h-full w-full" />
+    <div className="rounded-lg  bg-gray-100 shadow-md hover:shadow-2xl hover-shadow-gray-800 text-gray-500">
+      <div className="md:h-[20rem] lg:h-[30rem] ">
+        <img src={service_img} alt="" className=" h-full w-full rounded-t-lg" />
       </div>
       <div className="px-6 pb-8">
         <div>
-          <h2 className="text-3xl font-semibold  text-teal-900 pb-2 pt-2">
+          <h2 className="text-2xl lg:text-3xl font-semibold  text-teal-900 pb-2 pt-2">
             {service_name}
           </h2>
           <p className="pt-3  text-lg">

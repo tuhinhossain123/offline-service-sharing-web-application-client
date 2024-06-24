@@ -8,7 +8,7 @@ const ServiceFrom = ({ handleSubmit }) => {
   return (
     <div className=" my-16 px-5">
       <div className="bg-[#3e7172] w-full lg:w-[50%] mx-auto p-4 lg:p-8 rounded-lg shadow-2xl ">
-        <h2 className="text-5xl text-white font-semibold text-center pb-5">Add Service</h2>
+        <h2 className="text-4xl md:text-5xl text-white font-semibold text-center pb-5">Add Service</h2>
         <form
           onSubmit={handleSubmit}
           

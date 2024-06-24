@@ -7,7 +7,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 const UpdateService = () => {
   const data = useLoaderData();
   const { user } = useContext(AuthContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -29,13 +29,16 @@ const UpdateService = () => {
       service_area,
       service_des,
     };
-  
+
     axios
-      .patch(`http://localhost:5000/manage/${data._id}`, user)
+      .patch(
+        `https://offline-service-sharing-web-application-crud.vercel.app/manage/${data._id}`,
+        user
+      )
       .then((data) => {
         if (data.data.modifiedCount > 0) {
           toast.success("User Services Update");
-          navigate("/manageServices")
+          navigate("/manageServices");
         }
       })
       .catch((error) => {
