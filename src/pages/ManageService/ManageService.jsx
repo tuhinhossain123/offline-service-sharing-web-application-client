@@ -68,8 +68,8 @@ const ServicesService = () => {
 
   return (
     <div className="my-16">
-      <div className="lg:w-[90%] mx-auto">
-        <table className="table  ">
+      <div className="   ">
+        <table className="table w-[10%] lg:w-[90%] mx-auto">
           <thead>
             <tr className="text-lg bg-[#3e7172] text-white text-center ">
               <th>No</th>

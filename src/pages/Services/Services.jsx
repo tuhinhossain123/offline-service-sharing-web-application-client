@@ -15,7 +15,7 @@ const Services = ({ service }) => {
       <div className="md:h-[20rem] lg:h-[30rem] ">
         <img src={service_img} alt="" className=" h-full w-full rounded-t-lg" />
       </div>
-      <div className="px-6 pb-8">
+      <div className="px-4 pb-8">
         <div>
           <h2 className="text-2xl lg:text-3xl font-semibold  text-teal-900 pb-2 pt-2">
             {service_name}

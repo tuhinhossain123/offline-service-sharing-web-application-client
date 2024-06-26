@@ -147,9 +147,9 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="lg:px-20 py-1 bg-gray-50">
+    <div className="lg:px-20 py-1 bg-gray-50 ">
       <div className="navbar">
-        <div className="navbar-start">
+        <div className="navbar-start  z-[1000]">
           <div className="dropdown ">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
